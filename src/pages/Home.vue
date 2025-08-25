@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import HeroSection from '../components/HeroSection.vue'
+import SubscriptionSection from '../components/SubscriptionSection.vue'
 import CustomerLogos from '../components/CustomerLogos.vue'
 import FeatureSection from '../components/FeatureSection.vue'
 </script>
@@ -7,6 +8,7 @@ import FeatureSection from '../components/FeatureSection.vue'
 <template>
   <main>
     <HeroSection />
+    <SubscriptionSection />
     <CustomerLogos />
     <FeatureSection />
   </main>

@@ -34,18 +34,18 @@ const features = [
       </div>
       
       <!-- Large feature card with image -->
-      <div class="bg-white rounded-lg shadow-xl overflow-hidden mb-20">
+      <div class="bg-white rounded-lg shadow-xl overflow-hidden mb-16">
         <div class="flex flex-col lg:flex-row">
-          <div class="w-full lg:w-1/2 h-64 md:h-80 lg:h-auto">
+          <div class="w-full lg:w-1/2 h-48 md:h-64 lg:h-80">
             <img 
               src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80" 
               alt="Engineering simulation" 
               class="w-full h-full object-cover"
             />
           </div>
-          <div class="w-full lg:w-1/2 p-6 md:p-8 lg:p-12 flex flex-col justify-center">
-            <h3 class="text-2xl md:text-3xl font-bold text-dark mb-4 md:mb-6">Next-Gen Engineering Platform</h3>
-            <p class="text-base md:text-lg text-gray-600 mb-6">
+          <div class="w-full lg:w-1/2 p-6 md:p-8 flex flex-col justify-center">
+            <h3 class="text-xl md:text-2xl font-bold text-dark mb-4">Next-Gen Engineering Platform</h3>
+            <p class="text-base text-gray-600 mb-6">
               AEROS combines advanced simulation capabilities with intuitive design tools to revolutionize how engineers approach complex problems. Our platform enables faster iterations, more accurate results, and better collaboration across teams.
             </p>
             <button class="bg-primary hover:bg-primary/90 text-white font-bold px-6 py-3 rounded-lg transition-colors self-start">
@@ -56,13 +56,13 @@ const features = [
       </div>
       
       <!-- Vertical feature cards -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
         <div 
           v-for="(feature, index) in features" 
           :key="index"
-          class="bg-white rounded-lg shadow-lg p-6 md:p-8 transition-all duration-300 hover:shadow-xl"
+          class="bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl"
         >
-          <div class="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-6">
+          <div class="flex flex-col md:flex-row items-center md:items-start gap-4">
             <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
               <svg 
                 class="w-7 h-7 text-primary" 
@@ -75,7 +75,7 @@ const features = [
               </svg>
             </div>
             <div>
-              <h3 class="text-xl font-bold text-dark mb-2 md:mb-3 text-center md:text-left">{{ feature.title }}</h3>
+              <h3 class="text-lg font-bold text-dark mb-2 text-center md:text-left">{{ feature.title }}</h3>
               <p class="text-gray-600 text-center md:text-left">{{ feature.description }}</p>
             </div>
           </div>

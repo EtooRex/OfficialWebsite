@@ -156,7 +156,7 @@ const closeMenu = () => {
               </div>
             </div>
             
-            <a href="#" class="font-medium hover:text-primary transition-colors">Download</a>
+            <router-link to="/download" class="font-medium hover:text-primary transition-colors">Download</router-link>
             <button 
               class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-md transition-colors"
             >
@@ -283,7 +283,7 @@ const closeMenu = () => {
           </div>
         </div>
         
-        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100">Download</a>
+        <router-link @click="closeMenu" to="/download" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100">Download</router-link>
         <button class="w-full text-left block px-3 py-2 rounded-md text-base font-medium bg-primary text-white">
           Sign In
         </button>

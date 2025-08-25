@@ -17,6 +17,7 @@ import Documentation from './pages/Documentation.vue'
 import Tutorials from './pages/Tutorials.vue'
 import ApiReference from './pages/ApiReference.vue'
 import Examples from './pages/Examples.vue'
+import Download from './pages/Download.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -34,6 +35,7 @@ const router = createRouter({
     { path: '/tutorials', component: Tutorials },
     { path: '/api', component: ApiReference },
     { path: '/examples', component: Examples },
+    { path: '/download', component: Download },
   ],
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
