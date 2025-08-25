@@ -1,10 +1,14 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, computed, onMounted, onUnmounted } from 'vue';
+import { useRoute } from 'vue-router';
 
 const isScrolled = ref(false);
 const isMobileMenuOpen = ref(false);
 const activeDropdown = ref<string | null>(null);
+const route = useRoute();
 
+// Check if current route is home page
+const isHomePage = computed(() => route.path === '/');
 const checkScroll = () => {
   isScrolled.value = window.scrollY > 10;
 };
@@ -49,7 +53,9 @@ const closeMenu = () => {
 <template>
   <nav 
     class="fixed top-0 left-0 w-full z-50 transition-all duration-300"
-    :class="[isScrolled ? 'bg-white shadow-md text-dark' : 'bg-transparent text-white']"
+    :class="[
+      (isScrolled || !isHomePage) ? 'bg-white shadow-md text-dark' : 'bg-transparent text-white'
+    ]"
   >
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
@@ -170,7 +176,7 @@ const closeMenu = () => {
           <button 
             @click="toggleMobileMenu"
             class="inline-flex items-center justify-center p-2 rounded-md hover:bg-gray-100 focus:outline-none"
-            :class="isScrolled ? 'text-dark' : 'text-white hover:bg-white/10'"
+            :class="(isScrolled || !isHomePage) ? 'text-dark' : 'text-white hover:bg-white/10'"
           >
             <svg 
               class="h-6 w-6" 
