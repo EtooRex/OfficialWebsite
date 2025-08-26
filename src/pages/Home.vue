@@ -11,5 +11,6 @@ import FeatureSection from '../components/FeatureSection.vue'
     <SubscriptionSection />
     <CustomerLogos />
     <FeatureSection />
+    <SubscriptionSection />
   </main>
 </template>
