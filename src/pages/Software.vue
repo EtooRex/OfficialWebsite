@@ -35,7 +35,7 @@
           </div>
           <h3 class="text-xl font-bold text-dark mb-3">Weibull Toolbox®</h3>
           <p class="text-gray-600 mb-4">
-            Detailed guides for using all features of AEROS products, with examples and best practices.
+           Advanced statistical analysis suite designed to evaluate and model the failure characteristics of products and systems
           </p>
           <a href="#" class="text-primary font-medium hover:underline">Read more →</a>
         </div>
