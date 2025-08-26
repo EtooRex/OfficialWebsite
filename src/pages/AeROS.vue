@@ -16,7 +16,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
         <div>
           <h2 class="text-3xl font-bold text-dark mb-6">Advanced RAM Analysis</h2>
-          <p class="text-gray-600 mb-6">
+          <p class="text-gray-600 mb-6 text-align: justify">
             AeROS® extends beyond standard Reliability Block Diagram functionality (Series/Parallel, Sub-diagram, K-out-of-N) with advanced logical constructs and specialized features designed for heavy asset industries. 
             <br> 
             <br>
