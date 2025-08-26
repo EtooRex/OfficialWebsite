@@ -21,7 +21,7 @@
         <div class="hidden md:block">
           <div class="ml-10 flex items-baseline space-x-4">
             <!-- Software Dropdown -->
-            <div class="relative" @mouseenter="showSoftwareDropdown = true" @mouseleave="showSoftwareDropdown = false">
+            <div class="relative" @mouseenter="showDropdown" @mouseleave="hideDropdown">
               <button
                 :class="[
                   'px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 flex items-center',
@@ -37,7 +37,7 @@
               </button>
               
               <!-- Dropdown Menu -->
-              <div v-if="showSoftwareDropdown" class="absolute left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+              <div v-if="showSoftwareDropdown" class="absolute left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50" @mouseenter="showDropdown" @mouseleave="hideDropdown">
                 <router-link
                   to="/aeros"
                   class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-600 transition-colors duration-200"
@@ -139,6 +139,7 @@ const route = useRoute()
 const isScrolled = ref(false)
 const mobileMenuOpen = ref(false)
 const showSoftwareDropdown = ref(false)
+let dropdownTimeout: NodeJS.Timeout | null = null
 
 const isHomePage = computed(() => route.path === '/')
 
@@ -148,6 +149,19 @@ const navItems = [
   { name: 'Download', href: '/download' }
 ]
 
+const showDropdown = () => {
+  if (dropdownTimeout) {
+    clearTimeout(dropdownTimeout)
+    dropdownTimeout = null
+  }
+  showSoftwareDropdown.value = true
+}
+
+const hideDropdown = () => {
+  dropdownTimeout = setTimeout(() => {
+    showSoftwareDropdown.value = false
+  }, 300) // 300ms delay before hiding
+}
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 10
 }
