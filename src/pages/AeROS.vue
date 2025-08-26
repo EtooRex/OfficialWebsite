@@ -21,7 +21,7 @@
             <br> 
             <br>
             
-            The oil and gas industry is defined by extremely high-value production, incredibly harsh operating environments, severe safety risks, and massive capital investments. Unplanned downtime can cost hundreds of thousands to millions of dollars per day. RAM analysis is not just an engineering exercise here; it's a critical business and risk management tool.
+            The heavy asset industry is defined by extremely high-value production, incredibly harsh operating environments, severe safety risks, and massive capital investments. Unplanned downtime can cost hundreds of thousands to millions of dollars per day. RAM analysis is not just an engineering exercise here; it's a critical business and risk management tool.
           </p>
           <ul class="space-y-3">
             <li class="flex items-start">
