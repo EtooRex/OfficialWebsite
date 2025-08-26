@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div class="pt-20  text-align: justify;">
+  <div class="pt-20  text-align: justify">
     <div class="bg-primary/10 py-16">
       <div class="container mx-auto px-4">
         <h1 class="text-4xl font-bold text-dark mb-4">Reliability Software</h1>
