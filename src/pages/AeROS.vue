@@ -13,27 +13,27 @@
     </div>
     
     <div class="container mx-auto px-4 py-16">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
         <div>
-          <h2 class="text-2xl font-bold text-dark mb-4">Advanced RAM Analysis</h2>
-          <p class="text-gray-600 mb-4">
+          <h2 class="text-3xl font-bold text-dark mb-6">Advanced RAM Analysis</h2>
+          <p class="text-gray-600 mb-6">
             AeROS® extends beyond standard Reliability Block Diagram functionality (Series/Parallel, Sub-diagram, K-out-of-N) with advanced logical constructs and specialized features designed for heavy asset industries.
           </p>
-          <ul class="space-y-2">
+          <ul class="space-y-3">
             <li class="flex items-start">
-              <svg class="w-5 h-5 text-primary mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg class="w-6 h-6 text-primary mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
               <span>Reliability Block Diagram modeling</span>
             </li>
             <li class="flex items-start">
-              <svg class="w-5 h-5 text-primary mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg class="w-6 h-6 text-primary mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
               <span>Monte Carlo simulation engine</span>
             </li>
             <li class="flex items-start">
-              <svg class="w-5 h-5 text-primary mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg class="w-6 h-6 text-primary mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
               <span>Advanced maintenance modeling</span>
@@ -44,7 +44,7 @@
           <img 
             src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
             alt="AeROS Asset Reliability" 
-            class="rounded-lg shadow-md w-full max-w-md mx-auto"
+            class="rounded-lg shadow-lg w-full"
           />
         </div>
       </div>
