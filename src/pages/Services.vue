@@ -22,7 +22,7 @@
           />
           <div class="p-6">
             <div class="flex items-center mb-2">
-              <span class="bg-primary/10 text-primary text-xs font-semibold px-2 py-1 rounded-full">Expert Guidance</span>
+              <span class="bg-primary/10 text-primary text-xs font-semibold px-2 py-1 rounded-full">Tailored Solution</span>
             </div>
             <h3 class="text-xl font-bold text-dark mb-2">Reliability, Availability, Maintainability (RAM) Analysis</h3>
             <p class="text-gray-600 mb-4">
