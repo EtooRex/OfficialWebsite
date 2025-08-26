@@ -20,7 +20,7 @@
               Request Trial Access
             </button>
           <button class="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold px-6 py-3 rounded-lg transition-colors">
-              Watch Demo
+              Set Up Online Demo
             </button> 
           </div>
         </div>
