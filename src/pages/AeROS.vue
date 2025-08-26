@@ -11,7 +11,7 @@
         </p>
       </div>
        <div class="text-center">
-        <h2 class="text-3xl font-bold text-dark mb-8">Ready to optimize your asset reliability?</h2>
+    
         <button class="bg-primary hover:bg-primary/90 text-white font-bold px-8 py-4 rounded-lg transition-colors">
           Request Trial Access
         </button>
