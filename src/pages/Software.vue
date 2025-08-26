@@ -12,7 +12,7 @@
       </div>
     </div>
     
-    <div class="container mx-auto px-4 py-16 text-align: right">
+    <div class="container mx-auto px-4 py-16 ">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <div class="bg-white p-8 rounded-lg shadow-md ">
           <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
