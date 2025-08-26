@@ -13,7 +13,7 @@
     </div>
     
     <div class="container mx-auto px-4 py-16">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16 align="justify">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
         <div>
           <h2 class="text-3xl font-bold text-dark mb-6">Advanced RAM Analysis</h2>
           <p class="text-gray-600 mb-6">
