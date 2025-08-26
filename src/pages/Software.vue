@@ -22,7 +22,7 @@
           </div>
           <h3 class="text-xl font-bold text-dark mb-3">AeROS® (Asset Reliability and Operations Simulation)</h3>
           <p class="text-gray-600 mb-4">
-            Learn the basics of AEROS and get up and running quickly with our step-by-step guides.
+            AeROS® extends beyond standard Reliability Block Diagram functionality (Series/Parallel, Sub-diagram, K-out-of-N) with advanced logical constructs and specialized features for realistic simulations
           </p>
           <a href="#" class="text-primary font-medium hover:underline">Read more →</a>
         </div>
