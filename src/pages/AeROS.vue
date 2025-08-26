@@ -59,7 +59,7 @@
               </svg>
             </div>
             <h4 class="text-lg font-semibold text-dark mb-2">Reliability Block Diagrams</h4>
-            <p class="text-gray-600">Create complex system models with series, parallel, and K-out-of-N configurations.</p>
+            <p class="text-gray-600">Create complex system models with series, parallel, and K-out-of-N configurations</p>
           </div>
           
           <div class="text-center">
@@ -69,7 +69,7 @@
               </svg>
             </div>
             <h4 class="text-lg font-semibold text-dark mb-2">Monte Carlo Simulation</h4>
-            <p class="text-gray-600">Advanced simulation engine for accurate reliability and availability predictions.</p>
+            <p class="text-gray-600">Advanced simulation engine for accurate reliability and availability predictions</p>
           </div>
           
           <div class="text-center">
@@ -79,7 +79,7 @@
               </svg>
             </div>
             <h4 class="text-lg font-semibold text-dark mb-2">Maintenance Optimization</h4>
-            <p class="text-gray-600">Model and optimize maintenance strategies for maximum asset performance.</p>
+            <p class="text-gray-600">Model and optimize maintenance strategies for maximum asset performance</p>
           </div>
           
           <div class="text-center">
@@ -89,8 +89,8 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
               </svg>
             </div>
-            <h4 class="text-lg font-semibold text-dark mb-2">Performance Analytics</h4>
-            <p class="text-gray-600">Comprehensive reporting and analytics for informed decision making.</p>
+            <h4 class="text-lg font-semibold text-dark mb-2">Modeling of Complex Process Scenarios</h4>
+            <p class="text-gray-600">Includes Redundant Resource Manager for complex standby scenarios</p>
           </div>
           
           <div class="text-center">
