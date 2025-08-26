@@ -9,7 +9,8 @@
         <p class="text-xl text-gray-600 max-w-3xl">
           Advanced Reliability, Availability, Maintainability (RAM) analysis tool for heavy asset industry with specialized features for realistic simulations
         </p>
-      
+      </div>
+       
     </div>
     
     <div class="container mx-auto px-4 py-16">
