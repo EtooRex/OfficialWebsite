@@ -17,11 +17,11 @@
           </p>
           <div class="flex flex-col sm:flex-row justify-center gap-4 mb-8 md:mb-12">
             <button class="bg-white text-primary hover:bg-gray-100 font-bold px-6 py-3 rounded-lg transition-colors">
-              Get 12 Days Access
+              Get Started
             </button>
-            <button class="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold px-6 py-3 rounded-lg transition-colors">
+           <!-- <button class="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold px-6 py-3 rounded-lg transition-colors">
               Watch Demo
-            </button>
+            </button> -->
           </div>
         </div>
         
