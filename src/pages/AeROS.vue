@@ -7,7 +7,7 @@
       <div class="container mx-auto px-4">
         <h1 class="text-4xl font-bold text-dark mb-4">AeROS® - Asset Reliability and Operations Simulation</h1>
         <p class="text-xl text-gray-600 max-w-3xl">
-          Advanced Reliability, Availability, Maintainability (RAM) analysis tool for heavy asset industry with specialized features for realistic simulations
+          Advanced Reliability, Availability, Maintainability (RAM) analysis tool for heavy asset industry with specialized features for realistic simulations. The oil and gas industry is defined by extremely high-value production, incredibly harsh operating environments, severe safety risks, and massive capital investments. Unplanned downtime can cost hundreds of thousands to millions of dollars per day. RAM analysis is not just an engineering exercise here; it's a critical business and risk management tool.
         </p>
       </div>
     </div>
