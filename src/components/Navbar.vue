@@ -12,7 +12,7 @@
               'text-2xl font-bold',
               isScrolled || !isHomePage ? 'text-gray-700' : 'text-white'
             ]">
-              [ EtooreRex ]
+              EtooreRex # 
             </span>
           </router-link>
         </div>
