@@ -26,7 +26,7 @@
             </div>
             <h3 class="text-xl font-bold text-dark mb-2">RAM Analysis for Every Project Phase.</h3>
             <p class="text-gray-600 mb-4">
-              Expert guidance to help you implement and optimize reliability engineering practices in your organization.
+              Our specialized RAM assessment services de-risk decisions and optimize performance across the entire asset lifecycle (greenfield and brownfield)
             </p>
             <router-link to="/consulting" class="text-primary font-medium hover:underline">Learn more →</router-link>
           </div>
