@@ -8,8 +8,7 @@ import FeatureSection from '../components/FeatureSection.vue'
 <template>
   <main>
     <HeroSection />
- 
-    <CustomerLogos />
+     <CustomerLogos />
     <FeatureSection />
     <SubscriptionSection />
   </main>
