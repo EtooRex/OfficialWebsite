@@ -74,7 +74,7 @@ const handleSubscribe = async () => {
           </div>
         </div>
         
-        <div class="flex flex-wrap justify-center items-center gap-6 mt-12 opacity-60">
+      <!--  <div class="flex flex-wrap justify-center items-center gap-6 mt-12 opacity-60">
           <span class="text-sm text-gray-500">Trusted by engineers at:</span>
           <div class="flex flex-wrap justify-center items-center gap-6">
             <img src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg" alt="Company logo" class="h-6 opacity-50" />
@@ -82,7 +82,7 @@ const handleSubscribe = async () => {
             <img src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg" alt="Company logo" class="h-6 opacity-50" />
             <img src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg" alt="Company logo" class="h-6 opacity-50" />
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
