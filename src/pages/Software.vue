@@ -5,7 +5,7 @@
   <div class="pt-20">
     <div class="bg-primary/10 py-16">
       <div class="container mx-auto px-4">
-        <h1 class="text-4xl font-bold text-dark mb-4">Software</h1>
+        <h1 class="text-4xl font-bold text-dark mb-4">Reliability Software</h1>
         <p class="text-xl text-gray-600 max-w-3xl">
           Comprehensive guides and reference materials for AEROS products and services.
         </p>
