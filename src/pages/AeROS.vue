@@ -3,7 +3,7 @@
 
 <template>
   <div class="pt-20">
-    <div class="bg-primary/10 py-8">
+    <div class="bg-primary/10 py-16">
       <div class="container mx-auto px-4">
         <h1 class="text-4xl font-bold text-dark mb-4">AeROS® - Asset Reliability and Operations Simulation</h1>
         <p class="text-xl text-gray-600 max-w-3xl">
@@ -12,7 +12,7 @@
       </div>
     </div>
     
-    <div class="container mx-auto px-4 py-12">
+    <div class="container mx-auto px-4 py-16">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
         <div>
           <h2 class="text-3xl font-bold text-dark mb-6">Advanced RAM Analysis</h2>
