@@ -39,7 +39,7 @@
               <span>Advanced maintenance modeling</span>
             </li>
           </ul>
-          <p class="text-gray-600 mb-6">
+    
             
             The oil and gas industry is defined by extremely high-value production, incredibly harsh operating environments, severe safety risks, and massive capital investments. Unplanned downtime can cost hundreds of thousands to millions of dollars per day. RAM analysis is not just an engineering exercise here; it's a critical business and risk management tool.
 
@@ -77,7 +77,7 @@ Reducing Dangerous Interventions: By improving reliability and planning maintena
 
 Preventing Major accidents: Equipment failure is a primary initiating event for major incidents. A robust RAM program that ensures equipment is reliable and well-maintained is a foundational element of process safety management (PSM).
 
-          </p>
+        
         </div>
         <div>
           <img 
