@@ -100,7 +100,7 @@
               </svg>
             </div>
             <h4 class="text-lg font-semibold text-dark mb-2">Asset Management</h4>
-            <p class="text-gray-600">Integrated asset management capabilities for complete lifecycle analysis.</p>
+            <p class="text-gray-600">Features Life-Stress Models using cumulative damage theory to analyze production rate impacts</p>
           </div>
           
           <div class="text-center">
