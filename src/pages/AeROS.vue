@@ -7,7 +7,7 @@
       <div class="container mx-auto px-4">
         <h1 class="text-4xl font-bold text-dark mb-4">AeROS® - Asset Reliability and Operations Simulation</h1>
         <p class="text-xl text-gray-600 max-w-3xl">
-          Advanced Reliability, Availability, Maintainability (RAM) analysis tool for heavy asset industry with specialized features for realistic simulations.
+          Advanced Reliability, Availability, Maintainability (RAM) analysis tool for heavy asset industry with specialized features for realistic simulations
         </p>
       </div>
     </div>
