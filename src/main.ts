@@ -13,7 +13,7 @@ import Consulting from './pages/Consulting.vue'
 import Training from './pages/Training.vue'
 import Support from './pages/Support.vue'
 import CustomDevelopment from './pages/CustomDevelopment.vue'
-import Documentation from './pages/Documentation.vue'
+import Software from './pages/Software.vue'
 import Tutorials from './pages/Tutorials.vue'
 import ApiReference from './pages/ApiReference.vue'
 import Examples from './pages/Examples.vue'
@@ -31,7 +31,7 @@ const router = createRouter({
     { path: '/training', component: Training },
     { path: '/support', component: Support },
     { path: '/custom-development', component: CustomDevelopment },
-    { path: '/documentation', component: Documentation },
+    { path: '/software', component: Software },
     { path: '/tutorials', component: Tutorials },
     { path: '/api', component: ApiReference },
     { path: '/examples', component: Examples },
