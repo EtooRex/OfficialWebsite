@@ -85,7 +85,7 @@ const isHomePage = computed(() => route.path === '/')
 
 const navItems = [
   // { name: 'Home', href: '/' },
-  { name: 'Software', href: '/Software' },
+  { name: 'Software', href: '/software' },
   { name: 'Examples', href: '/examples' },
   { name: 'Tutorials', href: '/tutorials' },
   { name: 'API Reference', href: '/api-reference' },
