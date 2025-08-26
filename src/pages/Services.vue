@@ -24,7 +24,7 @@
             <div class="flex items-center mb-2">
               <span class="bg-primary/10 text-primary text-xs font-semibold px-2 py-1 rounded-full">Expert Guidance</span>
             </div>
-            <h3 class="text-xl font-bold text-dark mb-2">Consulting Services</h3>
+            <h3 class="text-xl font-bold text-dark mb-2">RAM Analysis for Every Project Phase.</h3>
             <p class="text-gray-600 mb-4">
               Expert guidance to help you implement and optimize reliability engineering practices in your organization.
             </p>
