@@ -9,10 +9,10 @@
         <div class="flex-shrink-0">
           <router-link to="/" class="flex items-center">
             <span :class="[
-              'text-xl font-bold',
+              'text-2xl font-bold',
               isScrolled || !isHomePage ? 'text-gray-700' : 'text-white'
             ]">
-              AEROS
+              [EtooreRex]
             </span>
           </router-link>
         </div>
