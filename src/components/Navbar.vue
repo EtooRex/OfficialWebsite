@@ -9,7 +9,7 @@
         <div class="flex-shrink-0">
           <router-link to="/" class="flex items-center">
             <span :class="[
-              'text-2xl font-bold',
+              'text-xl font-bold',
               isScrolled || !isHomePage ? 'text-gray-700' : 'text-white'
             ]">
               AEROS
