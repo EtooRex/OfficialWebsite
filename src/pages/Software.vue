@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div class="pt-20  text-align: justify">
+  <div class="pt-20  ">
     <div class="bg-primary/10 py-16">
       <div class="container mx-auto px-4">
         <h1 class="text-4xl font-bold text-dark mb-4">Reliability Software</h1>
@@ -21,7 +21,7 @@
             </svg>
           </div>
           <h3 class="text-xl font-bold text-dark mb-3">AeROS® (Asset Reliability and Operations Simulation)</h3>
-          <p class="text-gray-600 mb-4">
+          <p class="text-gray-600 mb-4 text-align: justify">
             Advanced Reliability, Availability, Maintainability (RAM) analysis tool for heavy asset industry. AeROS® extends beyond standard Reliability Block Diagram functionality (Series/Parallel, Sub-diagram, K-out-of-N) with advanced logical constructs and specialized features for realistic simulations
           </p>
           <a href="#" class="text-primary font-medium hover:underline">Read more →</a>
