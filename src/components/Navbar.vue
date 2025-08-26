@@ -10,7 +10,7 @@
           <router-link to="/" class="flex items-center">
             <span :class="[
               'text-2xl font-bold',
-              isScrolled || !isHomePage ? 'text-gray-900' : 'text-white'
+              isScrolled || !isHomePage ? 'text-gray-700' : 'text-white'
             ]">
               AEROS
             </span>
