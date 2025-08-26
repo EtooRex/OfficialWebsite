@@ -40,8 +40,9 @@
             </li>
           </ul>
           <p class="text-gray-600 mb-6">
+            
             The oil and gas industry is defined by extremely high-value production, incredibly harsh operating environments, severe safety risks, and massive capital investments. Unplanned downtime can cost hundreds of thousands to millions of dollars per day. RAM analysis is not just an engineering exercise here; it's a critical business and risk management tool.
-
+ <ul class="space-y-3">
 1. During Design & Capital Projects (Front-End Engineering Design - FEED)
 This is where RAM analysis provides the highest return on investment.
 
@@ -74,6 +75,7 @@ Debottlenecking Production: If an asset is not meeting production targets, a RAM
 Reducing Dangerous Interventions: By improving reliability and planning maintenance better, the number of times personnel must be exposed to hazardous environments for troubleshooting or repair is significantly reduced.
 
 Preventing Major accidents: Equipment failure is a primary initiating event for major incidents. A robust RAM program that ensures equipment is reliable and well-maintained is a foundational element of process safety management (PSM).
+ </ul>
           </p>
         </div>
         <div>
