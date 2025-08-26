@@ -84,8 +84,8 @@ const mobileMenuOpen = ref(false)
 const isHomePage = computed(() => route.path === '/')
 
 const navItems = [
-  { name: 'Home', href: '/' },
-  { name: 'Documentation', href: '/documentation' },
+  // { name: 'Home', href: '/' },
+  { name: 'Software', href: '/Software' },
   { name: 'Examples', href: '/examples' },
   { name: 'Tutorials', href: '/tutorials' },
   { name: 'API Reference', href: '/api-reference' },
