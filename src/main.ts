@@ -11,13 +11,13 @@ import Cloud from './pages/Cloud.vue'
 import Enterprise from './pages/Enterprise.vue'
 import Consulting from './pages/Consulting.vue'
 import Training from './pages/Training.vue'
-import Support from './pages/Support.vue'
 import CustomDevelopment from './pages/CustomDevelopment.vue'
 import Software from './pages/Software.vue'
-import Tutorials from './pages/Tutorials.vue'
-import ApiReference from './pages/ApiReference.vue'
-import Examples from './pages/Examples.vue'
 import Download from './pages/Download.vue'
+import AeROS from './pages/AeROS.vue'
+import WeibullToolbox from './pages/WeibullToolbox.vue'
+import Services from './pages/Services.vue'
+import Learn from './pages/Learn.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -29,13 +29,13 @@ const router = createRouter({
     { path: '/enterprise', component: Enterprise },
     { path: '/consulting', component: Consulting },
     { path: '/training', component: Training },
-    { path: '/support', component: Support },
     { path: '/custom-development', component: CustomDevelopment },
     { path: '/software', component: Software },
-    { path: '/tutorials', component: Tutorials },
-    { path: '/api', component: ApiReference },
-    { path: '/examples', component: Examples },
     { path: '/download', component: Download },
+    { path: '/aeros', component: AeROS },
+    { path: '/weibull-toolbox', component: WeibullToolbox },
+    { path: '/services', component: Services },
+    { path: '/learn', component: Learn },
   ],
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {

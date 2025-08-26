@@ -20,6 +20,42 @@
         <!-- Desktop Navigation -->
         <div class="hidden md:block">
           <div class="ml-10 flex items-baseline space-x-4">
+            <!-- Software Dropdown -->
+            <div class="relative" @mouseenter="showSoftwareDropdown = true" @mouseleave="showSoftwareDropdown = false">
+              <button
+                :class="[
+                  'px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 flex items-center',
+                  isScrolled || !isHomePage 
+                    ? 'text-gray-700 hover:text-pink-600 hover:bg-gray-100' 
+                    : 'text-white hover:text-pink-200 hover:bg-white/10'
+                ]"
+              >
+                Software
+                <svg class="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              
+              <!-- Dropdown Menu -->
+              <div v-if="showSoftwareDropdown" class="absolute left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+                <router-link
+                  to="/aeros"
+                  class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-600 transition-colors duration-200"
+                >
+                  <div class="font-semibold">AeROS®</div>
+                  <div class="text-xs text-gray-500 mt-1">Asset Reliability and Operations Simulation</div>
+                </router-link>
+                <router-link
+                  to="/weibull-toolbox"
+                  class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-600 transition-colors duration-200"
+                >
+                  <div class="font-semibold">Weibull Toolbox®</div>
+                  <div class="text-xs text-gray-500 mt-1">Advanced statistical analysis suite</div>
+                </router-link>
+              </div>
+            </div>
+
+            <!-- Other Navigation Items -->
             <router-link
               v-for="item in navItems"
               :key="item.name"
@@ -59,6 +95,28 @@
     <!-- Mobile menu -->
     <div v-if="mobileMenuOpen" class="md:hidden bg-white shadow-lg">
       <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <!-- Mobile Software Section -->
+        <div class="border-b border-gray-200 pb-2 mb-2">
+          <div class="px-3 py-2 text-sm font-medium text-gray-900">Software</div>
+          <router-link
+            to="/aeros"
+            @click="mobileMenuOpen = false"
+            class="block px-6 py-2 text-sm text-gray-700 hover:text-pink-600 hover:bg-gray-100 transition-colors duration-200"
+          >
+            <div class="font-medium">AeROS®</div>
+            <div class="text-xs text-gray-500">Asset Reliability and Operations Simulation</div>
+          </router-link>
+          <router-link
+            to="/weibull-toolbox"
+            @click="mobileMenuOpen = false"
+            class="block px-6 py-2 text-sm text-gray-700 hover:text-pink-600 hover:bg-gray-100 transition-colors duration-200"
+          >
+            <div class="font-medium">Weibull Toolbox®</div>
+            <div class="text-xs text-gray-500">Advanced statistical analysis suite</div>
+          </router-link>
+        </div>
+        
+        <!-- Other Mobile Navigation Items -->
         <router-link
           v-for="item in navItems"
           :key="item.name"
@@ -80,16 +138,13 @@ import { useRoute } from 'vue-router'
 const route = useRoute()
 const isScrolled = ref(false)
 const mobileMenuOpen = ref(false)
+const showSoftwareDropdown = ref(false)
 
 const isHomePage = computed(() => route.path === '/')
 
 const navItems = [
-  { name: 'Home', href: '/' },
-  { name: 'Software', href: '/software' },
-  { name: 'Examples', href: '/examples' },
-  { name: 'Tutorials', href: '/tutorials' },
-  { name: 'API Reference', href: '/api' },
-  { name: 'Support', href: '/support' },
+  { name: 'Services', href: '/services' },
+  { name: 'Learn', href: '/learn' },
   { name: 'Download', href: '/download' }
 ]
 
