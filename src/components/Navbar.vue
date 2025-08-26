@@ -12,7 +12,7 @@
               'text-2xl font-bold',
               isScrolled || !isHomePage ? 'text-gray-900' : 'text-white'
             ]">
-              AEROS
+              EtooRex
             </span>
           </router-link>
         </div>
