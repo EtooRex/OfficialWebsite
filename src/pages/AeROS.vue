@@ -19,6 +19,7 @@
           <p class="text-gray-600 mb-6">
             AeROS® extends beyond standard Reliability Block Diagram functionality (Series/Parallel, Sub-diagram, K-out-of-N) with advanced logical constructs and specialized features designed for heavy asset industries. 
             <br> 
+            <br>
             
             The oil and gas industry is defined by extremely high-value production, incredibly harsh operating environments, severe safety risks, and massive capital investments. Unplanned downtime can cost hundreds of thousands to millions of dollars per day. RAM analysis is not just an engineering exercise here; it's a critical business and risk management tool.
           </p>
