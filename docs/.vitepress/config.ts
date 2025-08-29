@@ -5,6 +5,7 @@ export default defineConfig({
   description: 'Comprehensive learning resources for reliability engineering',
   base: '/learn/',
   outDir: '../dist/learn',
+  ignoreDeadLinks: ['/download', '/training'],
   
   themeConfig: {
     nav: [
