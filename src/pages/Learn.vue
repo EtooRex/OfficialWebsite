@@ -14,10 +14,13 @@ const refreshDocs = () => {
   isLoading.value = true
   // Force iframe reload
   const timestamp = new Date().getTime()
-  docsUrl.value = `http://localhost:5174/?t=${timestamp}`
+  docsUrl.value = `http://localhost:5174/guide/?t=${timestamp}`
 }
 
 onMounted(() => {
+  // Set initial URL to guide index
+  docsUrl.value = 'http://localhost:5174/guide/'
+  
   // Set initial loading state
   setTimeout(() => {
     if (isLoading.value) {
