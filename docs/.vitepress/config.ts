@@ -19,25 +19,19 @@ export default defineConfig({
         {
           text: 'Getting Started',
           items: [
-            { text: 'Introduction', link: '/documentation/' },
-            { text: 'Installation', link: '/documentation/installation' },
-            { text: 'Quick Start', link: '/documentation/quick-start' }
+            { text: 'Introduction', link: '/documentation/' }
           ]
         },
         {
           text: 'AeROS®',
           items: [
-            { text: 'Overview', link: '/documentation/aeros/' },
-            { text: 'User Guide', link: '/documentation/aeros/user-guide' },
-            { text: 'Examples', link: '/documentation/aeros/examples' }
+            { text: 'Overview', link: '/documentation/aeros/' }
           ]
         },
         {
           text: 'Weibull Toolbox®',
           items: [
-            { text: 'Overview', link: '/documentation/weibull/' },
-            { text: 'User Guide', link: '/documentation/weibull/user-guide' },
-            { text: 'Examples', link: '/documentation/weibull/examples' }
+            { text: 'Overview', link: '/documentation/weibull/' }
           ]
         }
       ],
@@ -45,9 +39,7 @@ export default defineConfig({
         {
           text: 'Video Tutorials',
           items: [
-            { text: 'Getting Started', link: '/tutorials/' },
-            { text: 'AeROS Basics', link: '/tutorials/aeros-basics' },
-            { text: 'Weibull Analysis', link: '/tutorials/weibull-analysis' }
+            { text: 'Getting Started', link: '/tutorials/' }
           ]
         }
       ],
@@ -55,9 +47,7 @@ export default defineConfig({
         {
           text: 'API Reference',
           items: [
-            { text: 'Introduction', link: '/api/' },
-            { text: 'Authentication', link: '/api/authentication' },
-            { text: 'Endpoints', link: '/api/endpoints' }
+            { text: 'Introduction', link: '/api/' }
           ]
         }
       ]
