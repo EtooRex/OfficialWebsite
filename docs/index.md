@@ -8,28 +8,19 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /documentation/
+      link: /documentation
     - theme: alt
-      text: View Tutorials
-      link: /tutorials/
+      text: View on GitHub
+      link: https://github.com/aeros
 
 features:
   - title: AeROS® Documentation
-    details: Comprehensive guides for Asset Reliability and Operations Simulation covering everything from basic concepts to advanced techniques.
+    details: Asset Reliability and Operations Simulation - Advanced RAM analysis for heavy asset industry
     icon: 📊
   - title: Weibull Toolbox® Documentation
-    details: Learn about advanced statistical analysis capabilities including distribution fitting and life data analysis.
+    details: Advanced statistical analysis suite for reliability engineering and failure analysis
     icon: 📈
-  - title: Video Tutorials
-    details: Step-by-step video guides and walkthroughs to help you master reliability analysis techniques.
-    icon: 🎥
-  - title: API Reference
-    details: Complete API documentation for developers looking to integrate our reliability analysis capabilities.
-    icon: 🔧
   - title: Data Classification Guide
-    details: Understanding different types of reliability data and their characteristics for proper analysis.
+    details: Understanding different types of reliability data and their characteristics
     icon: 📋
-  - title: Best Practices
-    details: Industry best practices for reliability engineering, maintenance optimization, and asset management.
-    icon: ✨
 ---
