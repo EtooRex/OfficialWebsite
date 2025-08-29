@@ -199,4 +199,3 @@ const copyCommand = (command: string) => {
     </div>
   </div>
 </template>
-</template>
