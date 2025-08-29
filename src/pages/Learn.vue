@@ -18,9 +18,7 @@ const refreshDocs = () => {
 }
 
 onMounted(() => {
-  // Set initial URL to docs index
-  docsUrl.value = 'http://localhost:5174/'
-  
+  // Set initial URL to guide index
   docsUrl.value = 'http://localhost:5174/guide/'
   
   // Set initial URL to docs index
