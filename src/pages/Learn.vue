@@ -90,4 +90,3 @@ iframe::-webkit-scrollbar-thumb:hover {
   background: rgba(252, 3, 123, 0.8);
 }
 </style>
-</template>
