@@ -22,9 +22,9 @@
           </div>
           <h3 class="text-xl font-bold text-dark mb-3">Documentation</h3>
           <p class="text-gray-600 mb-4">
-            Comprehensive guides and documentation for AeROS® and Weibull Toolbox® to help you get started quickly.
+            Comprehensive guides and documentation for AeROS® and Weibull Toolbox® powered by VitePress.
           </p>
-          <router-link to="/software" class="text-primary font-medium hover:underline">Read documentation →</router-link>
+          <a href="/docs/" target="_blank" class="text-primary font-medium hover:underline">Read documentation →</a>
         </div>
         
         <div class="bg-white p-8 rounded-lg shadow-md">
@@ -48,9 +48,9 @@
           </div>
           <h3 class="text-xl font-bold text-dark mb-3">API Reference</h3>
           <p class="text-gray-600 mb-4">
-            Complete API documentation for developers looking to integrate our reliability analysis capabilities.
+            Complete API documentation for developers looking to integrate our reliability analysis capabilities, powered by VitePress.
           </p>
-          <a href="#" class="text-primary font-medium hover:underline">View API docs →</a>
+          <a href="/docs/api/" target="_blank" class="text-primary font-medium hover:underline">View API docs →</a>
         </div>
       </div>
       
@@ -58,9 +58,13 @@
         <h3 class="text-2xl font-bold text-dark mb-6">Popular Learning Resources</h3>
         <div class="space-y-6">
           <div class="border-b border-gray-200 pb-6">
-            <h4 class="text-lg font-semibold text-dark mb-2">Getting Started with AeROS®</h4>
+            <h4 class="text-lg font-semibold text-dark mb-2">
+              <a href="/docs/aeros/" target="_blank" class="text-dark hover:text-primary transition-colors">
+                Getting Started with AeROS®
+              </a>
+            </h4>
             <p class="text-gray-600 mb-3">
-              Learn the fundamentals of reliability block diagram modeling and Monte Carlo simulation with AeROS®.
+              Learn the fundamentals of reliability block diagram modeling and Monte Carlo simulation.
             </p>
             <div class="flex items-center text-sm text-gray-500">
               <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium mr-2">Beginner</span>
@@ -69,7 +73,11 @@
           </div>
           
           <div class="border-b border-gray-200 pb-6">
-            <h4 class="text-lg font-semibold text-dark mb-2">Weibull Analysis Fundamentals</h4>
+            <h4 class="text-lg font-semibold text-dark mb-2">
+              <a href="/docs/weibull-toolbox/" target="_blank" class="text-dark hover:text-primary transition-colors">
+                Weibull Analysis Fundamentals
+              </a>
+            </h4>
             <p class="text-gray-600 mb-3">
               Master the basics of Weibull distribution analysis and parameter estimation techniques.
             </p>
@@ -80,7 +88,11 @@
           </div>
           
           <div class="border-b border-gray-200 pb-6">
-            <h4 class="text-lg font-semibold text-dark mb-2">Advanced Maintenance Modeling</h4>
+            <h4 class="text-lg font-semibold text-dark mb-2">
+              <a href="/docs/aeros/advanced-features" target="_blank" class="text-dark hover:text-primary transition-colors">
+                Advanced Maintenance Modeling
+              </a>
+            </h4>
             <p class="text-gray-600 mb-3">
               Explore advanced maintenance strategies and optimization techniques for asset reliability.
             </p>
@@ -91,13 +103,17 @@
           </div>
           
           <div>
-            <h4 class="text-lg font-semibold text-dark mb-2">Industry Best Practices</h4>
+            <h4 class="text-lg font-semibold text-dark mb-2">
+              <a href="/docs/api/" target="_blank" class="text-dark hover:text-primary transition-colors">
+                API Integration Guide
+              </a>
+            </h4>
             <p class="text-gray-600 mb-3">
-              Learn industry best practices for implementing reliability engineering in your organization.
+              Learn how to integrate our APIs into your existing systems and workflows.
             </p>
             <div class="flex items-center text-sm text-gray-500">
-              <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-medium mr-2">Expert</span>
-              <span>90 min read</span>
+              <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium mr-2">Intermediate</span>
+              <span>45 min read</span>
             </div>
           </div>
         </div>
@@ -109,9 +125,9 @@
           <p class="text-gray-600 mb-6">
             Try our interactive tutorials and hands-on exercises to practice reliability analysis techniques.
           </p>
-          <button class="bg-primary hover:bg-primary/90 text-white font-bold px-6 py-3 rounded-lg transition-colors">
+          <a href="/docs/" target="_blank" class="bg-primary hover:bg-primary/90 text-white font-bold px-6 py-3 rounded-lg transition-colors inline-block">
             Start Interactive Tutorial
-          </button>
+          </a>
         </div>
         
         <div class="bg-gradient-to-r from-gray-100 to-gray-50 p-8 rounded-lg">
@@ -119,9 +135,9 @@
           <p class="text-gray-600 mb-6">
             Connect with other reliability engineers, ask questions, and share knowledge in our community forum.
           </p>
-          <button class="bg-gray-800 hover:bg-gray-700 text-white font-bold px-6 py-3 rounded-lg transition-colors">
+          <a href="#" class="bg-gray-800 hover:bg-gray-700 text-white font-bold px-6 py-3 rounded-lg transition-colors inline-block">
             Join Community
-          </button>
+          </a>
         </div>
       </div>
       
