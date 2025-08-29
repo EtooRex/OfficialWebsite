@@ -43,8 +43,8 @@ import FooterSection from '../components/FooterSection.vue'
             <p class="text-gray-700 mb-4">
               New to AEROS? Start with our Introduction Guide to learn the basics.
             </p>
-            <router-link to="/guide" class="text-blue-600 font-medium hover:underline">
-              Read Introduction Guide →
+            <router-link to="/software" class="text-blue-600 font-medium hover:underline">
+              View Software Overview →
             </router-link>
           </div>
 
@@ -87,9 +87,9 @@ import FooterSection from '../components/FooterSection.vue'
             <p class="text-gray-700 mb-4">
               Developers can explore our API documentation for integration guides.
             </p>
-            <a href="http://localhost:5174/api/" target="_blank" class="text-yellow-600 font-medium hover:underline">
-              View API Docs →
-            </a>
+            <router-link to="/api-reference" class="text-yellow-600 font-medium hover:underline">
+              View API Reference →
+            </router-link>
           </div>
         </div>
 
@@ -191,9 +191,6 @@ import FooterSection from '../components/FooterSection.vue'
                   Asset Reliability and Operations Simulation - Advanced RAM analysis tool for heavy asset industries with specialized features for realistic simulations.
                 </p>
                 <div class="space-y-2">
-                  <a href="http://localhost:5174/guide/aeros" target="_blank" class="text-primary font-medium hover:underline block">
-                    View Documentation →
-                  </a>
                   <router-link to="/aeros" class="text-gray-600 hover:text-primary transition-colors block">
                     Product Overview →
                   </router-link>
@@ -214,9 +211,6 @@ import FooterSection from '../components/FooterSection.vue'
                   Advanced statistical analysis suite designed to evaluate and model the failure characteristics of products and systems.
                 </p>
                 <div class="space-y-2">
-                  <a href="http://localhost:5174/guide/weibull" target="_blank" class="text-primary font-medium hover:underline block">
-                    View Documentation →
-                  </a>
                   <router-link to="/weibull-toolbox" class="text-gray-600 hover:text-primary transition-colors block">
                     Product Overview →
                   </router-link>
@@ -251,9 +245,9 @@ import FooterSection from '../components/FooterSection.vue'
             </div>
             
             <div class="text-center">
-              <a href="http://localhost:5174/api/" target="_blank" class="bg-primary hover:bg-primary/90 text-white font-medium px-6 py-3 rounded-lg transition-colors inline-block">
-                View Complete API Documentation
-              </a>
+              <router-link to="/api-reference" class="bg-primary hover:bg-primary/90 text-white font-medium px-6 py-3 rounded-lg transition-colors inline-block">
+                View Complete API Reference
+              </router-link>
             </div>
           </div>
 
@@ -261,41 +255,41 @@ import FooterSection from '../components/FooterSection.vue'
           <div class="bg-gray-50 rounded-lg p-8">
             <h2 class="text-2xl font-bold text-dark mb-6 text-center">Quick Links</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <a href="http://localhost:5174/guide/" target="_blank" class="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
+              <router-link to="/software" class="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
                 <div class="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2">
                   <svg class="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                   </svg>
                 </div>
-                <span class="text-sm font-medium text-dark">Guide</span>
-              </a>
+                <span class="text-sm font-medium text-dark">Software</span>
+              </router-link>
               
-              <a href="http://localhost:5174/guide/installation" target="_blank" class="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
+              <router-link to="/download" class="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
                 <div class="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2">
                   <svg class="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                   </svg>
                 </div>
-                <span class="text-sm font-medium text-dark">Installation</span>
-              </a>
+                <span class="text-sm font-medium text-dark">Download</span>
+              </router-link>
               
-              <a href="http://localhost:5174/guide/quick-start" target="_blank" class="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
+              <router-link to="/services" class="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
                 <div class="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2">
                   <svg class="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <span class="text-sm font-medium text-dark">Quick Start</span>
-              </a>
+                <span class="text-sm font-medium text-dark">Services</span>
+              </router-link>
               
-              <a href="http://localhost:5174/api/" target="_blank" class="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
+              <router-link to="/api-reference" class="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
                 <div class="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2">
                   <svg class="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                   </svg>
                 </div>
                 <span class="text-sm font-medium text-dark">API</span>
-              </a>
+              </router-link>
             </div>
           </div>
         </div>

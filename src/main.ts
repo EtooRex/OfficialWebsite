@@ -14,6 +14,7 @@ import Training from './pages/Training.vue'
 import CustomDevelopment from './pages/CustomDevelopment.vue'
 import Software from './pages/Software.vue'
 import Download from './pages/Download.vue'
+import ApiReference from './pages/ApiReference.vue'
 import AeROS from './pages/AeROS.vue'
 import WeibullToolbox from './pages/WeibullToolbox.vue'
 import Services from './pages/Services.vue'
@@ -32,6 +33,7 @@ const router = createRouter({
     { path: '/custom-development', component: CustomDevelopment },
     { path: '/software', component: Software },
     { path: '/download', component: Download },
+    { path: '/api-reference', component: ApiReference },
     { path: '/aeros', component: AeROS },
     { path: '/weibull-toolbox', component: WeibullToolbox },
     { path: '/services', component: Services },
