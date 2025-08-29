@@ -56,21 +56,7 @@ Master the statistical foundations of reliability engineering with Weibull Toolb
 
 ## Quick Start Videos
 
-### 5-Minute Quick Starts
-
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-  <div class="feature-card">
-    <h4 class="font-semibold text-gray-800 mb-2">AeROS® Quick Start</h4>
-    <p class="text-gray-600 text-sm mb-3">Get up and running with your first reliability model in under 5 minutes.</p>
-    <span class="text-xs text-gray-500">Duration: 4:30</span>
-  </div>
-  
-  <div class="feature-card">
-    <h4 class="font-semibold text-gray-800 mb-2">Weibull Analysis Quick Start</h4>
-    <p class="text-gray-600 text-sm mb-3">Perform your first Weibull analysis from data import to results.</p>
-    <span class="text-xs text-gray-500">Duration: 4:45</span>
-  </div>
-</div>
+Coming soon - Quick start video tutorials for both AeROS® and Weibull Toolbox®.
 
 ## Industry-Specific Tutorials
 

@@ -61,7 +61,7 @@ Identify and address production constraints to maximize throughput and efficienc
 ## Getting Started
 
 1. **Installation**: Download and install AeROS® from our [download page](/download)
-2. **First Model**: Follow our [Quick Start Guide](/documentation/aeros/quick-start)
+2. **First Model**: Follow our Quick Start Guide to create your first reliability model
 3. **Training**: Consider our [training programs](/training) for comprehensive learning
 
 ::: tip Industry Focus

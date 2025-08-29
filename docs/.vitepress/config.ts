@@ -18,27 +18,19 @@ export default defineConfig({
         {
           text: 'Getting Started',
           items: [
-            { text: 'Introduction', link: '/documentation/' },
-            { text: 'Installation', link: '/documentation/installation' },
-            { text: 'Quick Start', link: '/documentation/quick-start' }
+            { text: 'Introduction', link: '/documentation/' }
           ]
         },
         {
           text: 'AeROS®',
           items: [
-            { text: 'Overview', link: '/documentation/aeros/' },
-            { text: 'RAM Analysis', link: '/documentation/aeros/ram-analysis' },
-            { text: 'Monte Carlo Simulation', link: '/documentation/aeros/monte-carlo' },
-            { text: 'Maintenance Modeling', link: '/documentation/aeros/maintenance' }
+            { text: 'Overview', link: '/documentation/aeros/' }
           ]
         },
         {
           text: 'Weibull Toolbox®',
           items: [
-            { text: 'Overview', link: '/documentation/weibull/' },
-            { text: 'Distribution Fitting', link: '/documentation/weibull/distribution-fitting' },
-            { text: 'Probability Plotting', link: '/documentation/weibull/probability-plotting' },
-            { text: 'Life Data Analysis', link: '/documentation/weibull/life-data-analysis' }
+            { text: 'Overview', link: '/documentation/weibull/' }
           ]
         }
       ],
@@ -46,10 +38,7 @@ export default defineConfig({
         {
           text: 'Video Tutorials',
           items: [
-            { text: 'Getting Started', link: '/tutorials/' },
-            { text: 'AeROS Basics', link: '/tutorials/aeros-basics' },
-            { text: 'Weibull Analysis', link: '/tutorials/weibull-analysis' },
-            { text: 'Advanced Techniques', link: '/tutorials/advanced' }
+            { text: 'Getting Started', link: '/tutorials/' }
           ]
         }
       ],
@@ -57,10 +46,7 @@ export default defineConfig({
         {
           text: 'API Reference',
           items: [
-            { text: 'Introduction', link: '/api/' },
-            { text: 'Authentication', link: '/api/authentication' },
-            { text: 'Simulation API', link: '/api/simulation' },
-            { text: 'Analysis API', link: '/api/analysis' }
+            { text: 'Introduction', link: '/api/' }
           ]
         }
       ]

@@ -109,7 +109,7 @@ Weibull analysis requires sufficient failure data for reliable parameter estimat
 ## Getting Started
 
 1. **Download**: Get Weibull Toolbox® from our [download page](/download)
-2. **Tutorial**: Start with our [Quick Start Tutorial](/tutorials/weibull-basics)
+2. **Tutorial**: Start with our Quick Start Tutorial to learn the basics
 3. **Sample Data**: Practice with our included sample datasets
 4. **Support**: Join our [community forum](https://community.etoorerex.com) for help
 
