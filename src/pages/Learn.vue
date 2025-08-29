@@ -1,22 +1,4 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
-
-const isDocsReady = ref(false)
-
-onMounted(() => {
-  // Check if docs are available
-  setTimeout(() => {
-    isDocsReady.value = true
-  }, 1000)
-})
-
-const openDocs = () => {
-  window.open('/docs/', '_blank')
-}
-
-const copyCommand = (command: string) => {
-  navigator.clipboard.writeText(command)
-}
 </script>
 
 <template>
@@ -26,174 +8,91 @@ const copyCommand = (command: string) => {
       <div class="container mx-auto px-4">
         <h1 class="text-4xl font-bold text-dark mb-4">Learn</h1>
         <p class="text-xl text-gray-600 max-w-3xl">
-          Comprehensive learning resources for reliability engineering and asset management powered by VitePress.
+          Comprehensive learning resources for reliability engineering and asset management.
         </p>
       </div>
     </div>
     
-    <!-- VitePress Documentation Access -->
-    <div class="container mx-auto px-4 py-8">
-      <div class="bg-white rounded-lg shadow-xl p-8 mb-16">
-        <div class="text-center mb-8">
-          <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-10 h-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <!-- Learning Resources -->
+    <div class="container mx-auto px-4 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
             </svg>
           </div>
-          <h2 class="text-3xl font-bold text-dark mb-4">VitePress Documentation</h2>
-          <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Our comprehensive documentation is built with VitePress, featuring automatic table of contents, search functionality, and a clean, professional interface.
+          <h3 class="text-xl font-bold text-dark mb-3">Data Classification</h3>
+          <p class="text-gray-600 mb-4">
+            Understanding different types of reliability data and their characteristics for proper analysis.
           </p>
-          
-          <div class="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-            <button 
-              @click="openDocs"
-              class="bg-primary hover:bg-primary/90 text-white font-bold px-8 py-4 rounded-lg transition-colors flex items-center justify-center"
-            >
-              <svg class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-              Open Documentation
-            </button>
-            <button 
-              @click="copyCommand('npm run docs:dev')"
-              class="bg-gray-100 hover:bg-gray-200 text-dark font-bold px-8 py-4 rounded-lg transition-colors flex items-center justify-center"
-            >
-              <svg class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-              </svg>
-              Copy Dev Command
-            </button>
-          </div>
+          <a href="#" class="text-primary font-medium hover:underline">Learn more →</a>
         </div>
         
-        <!-- Documentation Features -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          <div class="text-center">
-            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
-              </svg>
-            </div>
-            <h3 class="text-lg font-semibold text-dark mb-2">Auto Table of Contents</h3>
-            <p class="text-gray-600">VitePress automatically generates a table of contents from your markdown headings</p>
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
           </div>
-          
-          <div class="text-center">
-            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </div>
-            <h3 class="text-lg font-semibold text-dark mb-2">Built-in Search</h3>
-            <p class="text-gray-600">Powerful search functionality to quickly find the information you need</p>
-          </div>
-          
-          <div class="text-center">
-            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-              </svg>
-            </div>
-            <h3 class="text-lg font-semibold text-dark mb-2">Code Highlighting</h3>
-            <p class="text-gray-600">Syntax highlighting for code examples and API documentation</p>
-          </div>
+          <h3 class="text-xl font-bold text-dark mb-3">AeROS® Guide</h3>
+          <p class="text-gray-600 mb-4">
+            Asset Reliability and Operations Simulation for advanced RAM analysis in heavy asset industry.
+          </p>
+          <a href="#" class="text-primary font-medium hover:underline">Learn more →</a>
         </div>
         
-        <!-- Quick Start Guide -->
-        <div class="bg-gray-50 rounded-lg p-6">
-          <h3 class="text-xl font-bold text-dark mb-4">Quick Start Guide</h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <h4 class="text-lg font-semibold text-dark mb-2">1. Access Documentation</h4>
-              <p class="text-gray-600 mb-3">The documentation server is already running. Click "Open Documentation" to access the full guide.</p>
-              <code class="bg-white px-3 py-1 rounded text-sm">http://localhost:5173/docs/</code>
-            </div>
-            
-            <div>
-              <h4 class="text-lg font-semibold text-dark mb-2">2. Edit Content</h4>
-              <p class="text-gray-600 mb-3">All documentation is in markdown format. Edit the main file:</p>
-              <code class="bg-white px-3 py-1 rounded text-sm">docs/documentation.md</code>
-            </div>
-            
-            <div>
-              <h4 class="text-lg font-semibold text-dark mb-2">3. Auto Table of Contents</h4>
-              <p class="text-gray-600 mb-3">VitePress automatically generates TOC from your headings (##, ###, ####)</p>
-              <code class="bg-white px-3 py-1 rounded text-sm">outline: [2, 3, 4]</code>
-            </div>
-            
-            <div>
-              <h4 class="text-lg font-semibold text-dark mb-2">4. Build for Production</h4>
-              <p class="text-gray-600 mb-3">Build the documentation for deployment:</p>
-              <code class="bg-white px-3 py-1 rounded text-sm">npm run docs:build</code>
-            </div>
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
+            </svg>
           </div>
+          <h3 class="text-xl font-bold text-dark mb-3">Weibull Toolbox®</h3>
+          <p class="text-gray-600 mb-4">
+            Advanced statistical analysis suite for reliability engineering and failure analysis.
+          </p>
+          <a href="#" class="text-primary font-medium hover:underline">Learn more →</a>
         </div>
-      </div>
-      
-      <!-- Content Overview -->
-      <div class="bg-white p-8 rounded-lg shadow-xl">
-        <h3 class="text-2xl font-bold text-dark mb-6 text-center">Documentation Content</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="border border-gray-200 rounded-lg p-6">
-            <h4 class="text-lg font-semibold text-dark mb-2">Data Classification</h4>
-            <p class="text-gray-600 mb-3">Understanding reliability data types and characteristics</p>
-            <ul class="text-sm text-gray-500 space-y-1">
-              <li>• Complete Data</li>
-              <li>• Censored Data</li>
-              <li>• Grouped Data</li>
-            </ul>
+        
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
           </div>
-          
-          <div class="border border-gray-200 rounded-lg p-6">
-            <h4 class="text-lg font-semibold text-dark mb-2">AeROS® Guide</h4>
-            <p class="text-gray-600 mb-3">Asset Reliability and Operations Simulation</p>
-            <ul class="text-sm text-gray-500 space-y-1">
-              <li>• Advanced Modeling</li>
-              <li>• Monte Carlo Simulation</li>
-              <li>• Maintenance Optimization</li>
-            </ul>
+          <h3 class="text-xl font-bold text-dark mb-3">Best Practices</h3>
+          <p class="text-gray-600 mb-4">
+            Industry guidelines and recommendations for reliability engineering and asset management.
+          </p>
+          <a href="#" class="text-primary font-medium hover:underline">Learn more →</a>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
           </div>
-          
-          <div class="border border-gray-200 rounded-lg p-6">
-            <h4 class="text-lg font-semibold text-dark mb-2">Weibull Toolbox®</h4>
-            <p class="text-gray-600 mb-3">Statistical analysis for reliability engineering</p>
-            <ul class="text-sm text-gray-500 space-y-1">
-              <li>• Distribution Analysis</li>
-              <li>• Parameter Estimation</li>
-              <li>• Reliability Prediction</li>
-            </ul>
+          <h3 class="text-xl font-bold text-dark mb-3">API Reference</h3>
+          <p class="text-gray-600 mb-4">
+            Complete API documentation for AEROS products with examples and integration guides.
+          </p>
+          <a href="#" class="text-primary font-medium hover:underline">Learn more →</a>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+            </svg>
           </div>
-          
-          <div class="border border-gray-200 rounded-lg p-6">
-            <h4 class="text-lg font-semibold text-dark mb-2">Best Practices</h4>
-            <p class="text-gray-600 mb-3">Industry guidelines and recommendations</p>
-            <ul class="text-sm text-gray-500 space-y-1">
-              <li>• Data Collection</li>
-              <li>• Analysis Approach</li>
-              <li>• Common Pitfalls</li>
-            </ul>
-          </div>
-          
-          <div class="border border-gray-200 rounded-lg p-6">
-            <h4 class="text-lg font-semibold text-dark mb-2">API Reference</h4>
-            <p class="text-gray-600 mb-3">Complete API documentation with examples</p>
-            <ul class="text-sm text-gray-500 space-y-1">
-              <li>• Authentication</li>
-              <li>• Endpoints</li>
-              <li>• Code Examples</li>
-            </ul>
-          </div>
-          
-          <div class="border border-gray-200 rounded-lg p-6">
-            <h4 class="text-lg font-semibold text-dark mb-2">Tutorials</h4>
-            <p class="text-gray-600 mb-3">Step-by-step learning guides</p>
-            <ul class="text-sm text-gray-500 space-y-1">
-              <li>• Getting Started</li>
-              <li>• Advanced Techniques</li>
-              <li>• Real-world Examples</li>
-            </ul>
-          </div>
+          <h3 class="text-xl font-bold text-dark mb-3">Tutorials</h3>
+          <p class="text-gray-600 mb-4">
+            Step-by-step guides to help you master AEROS products and reliability engineering techniques.
+          </p>
+          <a href="#" class="text-primary font-medium hover:underline">Learn more →</a>
         </div>
       </div>
     </div>
