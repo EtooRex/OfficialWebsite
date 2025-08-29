@@ -8,6 +8,7 @@ export default defineConfig({
   
   themeConfig: {
     nav: [
+      { text: 'Home', link: '/' },
       { text: 'Documentation', link: '/documentation/' },
       { text: 'Tutorials', link: '/tutorials/' },
       { text: 'API Reference', link: '/api/' }
@@ -18,19 +19,25 @@ export default defineConfig({
         {
           text: 'Getting Started',
           items: [
-            { text: 'Introduction', link: '/documentation/' }
+            { text: 'Introduction', link: '/documentation/' },
+            { text: 'Installation', link: '/documentation/installation' },
+            { text: 'Quick Start', link: '/documentation/quick-start' }
           ]
         },
         {
           text: 'AeROS®',
           items: [
-            { text: 'Overview', link: '/documentation/aeros/' }
+            { text: 'Overview', link: '/documentation/aeros/' },
+            { text: 'User Guide', link: '/documentation/aeros/user-guide' },
+            { text: 'Examples', link: '/documentation/aeros/examples' }
           ]
         },
         {
           text: 'Weibull Toolbox®',
           items: [
-            { text: 'Overview', link: '/documentation/weibull/' }
+            { text: 'Overview', link: '/documentation/weibull/' },
+            { text: 'User Guide', link: '/documentation/weibull/user-guide' },
+            { text: 'Examples', link: '/documentation/weibull/examples' }
           ]
         }
       ],
@@ -38,7 +45,9 @@ export default defineConfig({
         {
           text: 'Video Tutorials',
           items: [
-            { text: 'Getting Started', link: '/tutorials/' }
+            { text: 'Getting Started', link: '/tutorials/' },
+            { text: 'AeROS Basics', link: '/tutorials/aeros-basics' },
+            { text: 'Weibull Analysis', link: '/tutorials/weibull-analysis' }
           ]
         }
       ],
@@ -46,7 +55,9 @@ export default defineConfig({
         {
           text: 'API Reference',
           items: [
-            { text: 'Introduction', link: '/api/' }
+            { text: 'Introduction', link: '/api/' },
+            { text: 'Authentication', link: '/api/authentication' },
+            { text: 'Endpoints', link: '/api/endpoints' }
           ]
         }
       ]
@@ -54,7 +65,12 @@ export default defineConfig({
     
     socialLinks: [
       { icon: 'github', link: 'https://github.com/etoorerex' }
-    ]
+    ],
+    
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2025 EtooreRex'
+    }
   },
   
   head: [

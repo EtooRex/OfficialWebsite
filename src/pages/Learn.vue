@@ -13,30 +13,18 @@ onMounted(() => {
 
 <template>
   <div class="pt-20 min-h-screen bg-gray-50">
-    <!-- Header section matching site design -->
-    <div class="bg-primary/10 py-8">
-      <div class="container mx-auto px-4">
-        <h1 class="text-4xl font-bold text-dark mb-4">Learn</h1>
-        <p class="text-xl text-gray-600 max-w-3xl">
-          Comprehensive learning resources to help you master reliability engineering and our software tools.
-        </p>
-      </div>
-    </div>
-    
-    <!-- VitePress content iframe -->
-    <div class="container mx-auto px-4 py-8">
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden" style="height: calc(100vh - 200px);">
-        <iframe 
-          ref="vitepress"
-          class="w-full h-full border-0"
-          title="Learn Documentation"
-          loading="lazy"
-        ></iframe>
-      </div>
+    <!-- VitePress content iframe with full height -->
+    <div class="w-full" style="height: calc(100vh - 80px);">
+      <iframe 
+        ref="vitepress"
+        class="w-full h-full border-0"
+        title="Learn Documentation"
+        loading="lazy"
+      ></iframe>
     </div>
     
     <!-- Fallback content for when VitePress is not available -->
-    <div class="container mx-auto px-4 pb-16">
+    <div class="container mx-auto px-4 py-16" v-show="false">
       <noscript>
         <div class="bg-white p-8 rounded-lg shadow-md">
           <h2 class="text-2xl font-bold text-dark mb-4">Documentation Access</h2>
@@ -67,26 +55,9 @@ onMounted(() => {
 </template>
 
 <style scoped>
-/* Ensure iframe takes full space */
+/* Ensure iframe takes full space without scrollbars */
 iframe {
-  min-height: 600px;
-}
-
-/* Custom scrollbar for iframe content */
-iframe::-webkit-scrollbar {
-  width: 8px;
-}
-
-iframe::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-iframe::-webkit-scrollbar-thumb {
-  background: #fc037b;
-  border-radius: 4px;
-}
-
-iframe::-webkit-scrollbar-thumb:hover {
-  background: rgba(252, 3, 123, 0.8);
+  border: none;
+  overflow: hidden;
 }
 </style>
