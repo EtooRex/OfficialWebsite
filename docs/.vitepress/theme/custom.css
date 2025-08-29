@@ -1,12 +1,16 @@
-/* Custom CSS to match your brand colors and design */
+/* Import Tailwind for consistency */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Override VitePress default styles to match your design */
 :root {
-  /* Brand colors matching your site */
   --vp-c-brand-1: #fc037b;
   --vp-c-brand-2: #fc037b;
   --vp-c-brand-3: #fc037b;
   --vp-c-brand-soft: rgba(252, 3, 123, 0.1);
   
-  /* Text colors matching your design */
+  /* Custom colors to match your theme */
   --vp-c-text-1: #1E293B;
   --vp-c-text-2: #64748B;
   --vp-c-text-3: #94A3B8;
@@ -25,29 +29,14 @@
   --vp-font-family-mono: 'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', monospace;
 }
 
-/* Header styling to match your navbar */
+/* Custom header styling */
 .VPNav {
   background-color: var(--vp-c-bg) !important;
   border-bottom: 1px solid var(--vp-c-border);
-  backdrop-filter: blur(10px);
 }
 
 .VPNavBar .title {
   font-weight: 700;
-  color: var(--vp-c-brand-1);
-}
-
-.VPNavBar .title:hover {
-  color: var(--vp-c-brand-1);
-}
-
-/* Navigation links */
-.VPNavBarMenu .VPLink {
-  color: var(--vp-c-text-1);
-  font-weight: 500;
-}
-
-.VPNavBarMenu .VPLink:hover {
   color: var(--vp-c-brand-1);
 }
 
@@ -57,34 +46,20 @@
   border-right: 1px solid var(--vp-c-border);
 }
 
-.VPSidebarItem .text {
-  color: var(--vp-c-text-1);
-}
-
-.VPSidebarItem.is-active .text {
-  color: var(--vp-c-brand-1);
-  font-weight: 600;
-}
-
 /* Content area */
 .VPContent {
   background-color: var(--vp-c-bg);
 }
 
-/* Button styling to match your design */
+/* Custom button styling */
 .VPButton.brand {
   background-color: var(--vp-c-brand-1);
   border-color: var(--vp-c-brand-1);
-  color: white;
-  font-weight: 600;
-  border-radius: 0.5rem;
-  transition: all 0.2s ease;
 }
 
 .VPButton.brand:hover {
   background-color: rgba(252, 3, 123, 0.9);
   border-color: rgba(252, 3, 123, 0.9);
-  transform: translateY(-1px);
 }
 
 /* Code blocks */
@@ -92,12 +67,10 @@
   background-color: var(--vp-c-bg-alt);
 }
 
-/* Typography matching your site */
+/* Custom spacing and typography */
 .vp-doc h1 {
   color: var(--vp-c-text-1);
   font-weight: 700;
-  font-size: 2.5rem;
-  line-height: 1.2;
 }
 
 .vp-doc h2 {
@@ -108,14 +81,22 @@
   margin-top: 2rem;
 }
 
-.vp-doc h3 {
-  color: var(--vp-c-text-1);
-  font-weight: 600;
-}
-
 .vp-doc p {
   color: var(--vp-c-text-2);
   line-height: 1.7;
+}
+
+/* Custom cards for feature sections */
+.feature-card {
+  @apply bg-white p-6 rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow;
+}
+
+.feature-icon {
+  @apply w-12 h-12 bg-pink-50 rounded-full flex items-center justify-center mb-4;
+}
+
+.feature-icon svg {
+  @apply w-6 h-6 text-pink-600;
 }
 
 /* Custom alert boxes */
@@ -127,101 +108,9 @@
   color: var(--vp-c-brand-1);
 }
 
-.custom-block.warning {
-  border-color: #f59e0b;
-}
-
-.custom-block.warning .custom-block-title {
-  color: #f59e0b;
-}
-
-/* Home page hero section */
-.VPHero .name {
-  color: var(--vp-c-text-1);
-}
-
-.VPHero .text {
-  color: var(--vp-c-text-2);
-}
-
-.VPHero .tagline {
-  color: var(--vp-c-text-2);
-}
-
-/* Feature cards on home page */
-.VPFeature {
-  background-color: var(--vp-c-bg);
-  border: 1px solid var(--vp-c-border);
-  border-radius: 0.75rem;
-  transition: all 0.2s ease;
-}
-
-.VPFeature:hover {
-  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  transform: translateY(-2px);
-}
-
-.VPFeature .title {
-  color: var(--vp-c-text-1);
-  font-weight: 600;
-}
-
-.VPFeature .details {
-  color: var(--vp-c-text-2);
-}
-
-/* Search */
-.DocSearch-Button {
-  background-color: var(--vp-c-bg-alt);
-  border: 1px solid var(--vp-c-border);
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .VPNavBar .content {
     padding: 0 1rem;
   }
-  
-  .vp-doc h1 {
-    font-size: 2rem;
-  }
-}
-
-/* Custom utility classes for content */
-.feature-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin: 2rem 0;
-}
-
-.feature-card {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 0.75rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  border: 1px solid var(--vp-c-border);
-  transition: all 0.2s ease;
-}
-
-.feature-card:hover {
-  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1);
-  transform: translateY(-2px);
-}
-
-.feature-icon {
-  width: 3rem;
-  height: 3rem;
-  background: rgba(252, 3, 123, 0.1);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1rem;
-}
-
-.feature-icon svg {
-  width: 1.5rem;
-  height: 1.5rem;
-  color: var(--vp-c-brand-1);
 }
