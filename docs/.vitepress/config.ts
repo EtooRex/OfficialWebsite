@@ -8,6 +8,7 @@ export default defineConfig({
   
   themeConfig: {
     nav: [
+      { text: 'Home', link: '/' },
       { text: 'Documentation', link: '/documentation/' },
       { text: 'Tutorials', link: '/tutorials/' },
       { text: 'API Reference', link: '/api/' }
@@ -18,7 +19,8 @@ export default defineConfig({
         {
           text: 'Getting Started',
           items: [
-            { text: 'Introduction', link: '/documentation/' }
+            { text: 'Introduction', link: '/documentation/' },
+            { text: 'Data Classification', link: '/documentation/data-classification' }
           ]
         },
         {
@@ -54,7 +56,12 @@ export default defineConfig({
     
     socialLinks: [
       { icon: 'github', link: 'https://github.com/etoorerex' }
-    ]
+    ],
+
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2025 EtooreRex'
+    }
   },
   
   head: [
