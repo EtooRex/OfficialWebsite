@@ -87,7 +87,7 @@ import FooterSection from '../components/FooterSection.vue'
             <p class="text-gray-700 mb-4">
               Developers can explore our API documentation for integration guides.
             </p>
-            <a href="#api-section" class="text-yellow-600 font-medium hover:underline">
+            <a href="http://localhost:5174/api/" target="_blank" class="text-yellow-600 font-medium hover:underline">
               View API Docs →
             </a>
           </div>
