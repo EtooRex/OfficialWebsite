@@ -12,7 +12,6 @@
     "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
-    "caniuse-lite": "^1.0.30001737",
     "vue": "^3.4.38",
     "vue-router": "^4.2.5"
   },
