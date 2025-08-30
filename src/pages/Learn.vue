@@ -126,7 +126,7 @@ const tableOfContents = [
     id: 'getting-started',
     title: 'Getting Started',
     items: [
-      { id: 'intro', title: 'Introduction', file: '/docs/getting-started.md' },
+      { id: 'intro', title: 'IntroductionTest', file: '/docs/getting-started.md' },
       { id: 'installation', title: 'Installation', file: '/docs/getting-started.md' }
     ]
   },
