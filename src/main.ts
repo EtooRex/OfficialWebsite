@@ -24,6 +24,8 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     { path: '/', component: Home },
+    { path: '/learn', component: Learn },
+    { path: '/learn/:path', component: Learn },
     { path: '/simulation', component: Simulation },
     { path: '/design', component: Design },
     { path: '/cloud', component: Cloud },
@@ -37,7 +39,6 @@ const router = createRouter({
     { path: '/aeros', component: AeROS },
     { path: '/weibull-toolbox', component: WeibullToolbox },
     { path: '/services', component: Services },
-    { path: '/learn', component: Learn },
   ],
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {

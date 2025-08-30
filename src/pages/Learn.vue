@@ -1,13 +1,42 @@
 <script setup lang="ts">
-import Navbar from '../components/Navbar.vue'
-import FooterSection from '../components/FooterSection.vue'
+import { ref, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
+import MarkdownRenderer from '../components/MarkdownRenderer.vue'
+
+const router = useRouter()
+const showDocumentation = ref(false)
+
+const navigateToDoc = (path: string) => {
+  router.push(`/learn/${path}`)
+  showDocumentation.value = true
+}
+
+onMounted(() => {
+  // Check if we're on a documentation route
+  showDocumentation.value = router.currentRoute.value.params.path !== undefined
+})
 </script>
 
 <template>
-  <div class="min-h-screen flex flex-col">
-    <Navbar />
+  <div class="pt-20">
+    <!-- Documentation View -->
+    <div v-if="$route.params.path" class="container mx-auto px-4 py-8">
+      <div class="mb-6">
+        <button 
+          @click="$router.push('/learn')"
+          class="flex items-center text-primary hover:text-primary/80 transition-colors"
+        >
+          <svg class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          Back to Documentation Home
+        </button>
+      </div>
+      <MarkdownRenderer />
+    </div>
     
-    <main class="flex-1 pt-20">
+    <!-- Documentation Home -->
+    <div v-else>
       <!-- Hero Section -->
       <div class="bg-primary/10 py-16">
         <div class="container mx-auto px-4">
@@ -157,19 +186,19 @@ import FooterSection from '../components/FooterSection.vue'
               <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
                 <h3 class="text-lg font-bold text-dark mb-3">Introduction</h3>
                 <p class="text-gray-600 mb-4">Learn about AEROS platform and its capabilities.</p>
-                <a href="http://localhost:5174/guide/" target="_blank" class="text-primary font-medium hover:underline">Read Guide →</a>
+                <button @click="navigateToDoc('getting-started')" class="text-primary font-medium hover:underline">Read Guide →</button>
               </div>
               
               <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
                 <h3 class="text-lg font-bold text-dark mb-3">Installation</h3>
                 <p class="text-gray-600 mb-4">System requirements and installation instructions.</p>
-                <a href="http://localhost:5174/guide/installation" target="_blank" class="text-primary font-medium hover:underline">View Installation →</a>
+                <button @click="navigateToDoc('installation')" class="text-primary font-medium hover:underline">View Installation →</button>
               </div>
               
               <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
                 <h3 class="text-lg font-bold text-dark mb-3">Quick Start</h3>
                 <p class="text-gray-600 mb-4">Get up and running with your first simulation.</p>
-                <a href="http://localhost:5174/guide/quick-start" target="_blank" class="text-primary font-medium hover:underline">Start Tutorial →</a>
+                <button @click="navigateToDoc('quick-start')" class="text-primary font-medium hover:underline">Start Tutorial →</button>
               </div>
             </div>
           </div>
@@ -194,6 +223,9 @@ import FooterSection from '../components/FooterSection.vue'
                   <router-link to="/aeros" class="text-gray-600 hover:text-primary transition-colors block">
                     Product Overview →
                   </router-link>
+                  <button @click="navigateToDoc('aeros-guide')" class="text-gray-600 hover:text-primary transition-colors block text-left">
+                    User Guide →
+                  </button>
                 </div>
               </div>
               
@@ -214,6 +246,9 @@ import FooterSection from '../components/FooterSection.vue'
                   <router-link to="/weibull-toolbox" class="text-gray-600 hover:text-primary transition-colors block">
                     Product Overview →
                   </router-link>
+                  <button @click="navigateToDoc('weibull-guide')" class="text-gray-600 hover:text-primary transition-colors block text-left">
+                    User Guide →
+                  </button>
                 </div>
               </div>
             </div>
@@ -230,6 +265,9 @@ import FooterSection from '../components/FooterSection.vue'
               <div class="border border-gray-200 rounded-lg p-4">
                 <h4 class="font-semibold text-dark mb-2">Authentication</h4>
                 <p class="text-sm text-gray-600 mb-3">Learn how to authenticate with AEROS APIs</p>
+                <button @click="navigateToDoc('api-authentication')" class="text-primary text-sm font-medium hover:underline">
+                  View Guide →
+                </button>
                 <div class="bg-gray-50 p-3 rounded text-sm font-mono">
                   Authorization: Bearer YOUR_API_KEY
                 </div>
@@ -238,6 +276,9 @@ import FooterSection from '../components/FooterSection.vue'
               <div class="border border-gray-200 rounded-lg p-4">
                 <h4 class="font-semibold text-dark mb-2">Simulation API</h4>
                 <p class="text-sm text-gray-600 mb-3">Create and manage simulations programmatically</p>
+                <button @click="navigateToDoc('simulation-api')" class="text-primary text-sm font-medium hover:underline">
+                  View Guide →
+                </button>
                 <div class="bg-gray-50 p-3 rounded text-sm font-mono">
                   POST /api/v1/simulations
                 </div>
@@ -294,8 +335,6 @@ import FooterSection from '../components/FooterSection.vue'
           </div>
         </div>
       </div>
-    </main>
-    
-    <FooterSection />
+    </div>
   </div>
 </template>
