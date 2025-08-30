@@ -12,19 +12,23 @@ export function parseMarkdown(content: string): { html: string; toc: TocItem[] }
   // Configure marked with custom renderer for headings
   const renderer = new marked.Renderer();
   
-  renderer.heading = function(text: string, level: number) {
-    const id = String(text).toLowerCase()
+  renderer.heading = function(text, level) {
+    // Convert text to string and clean it
+    const textStr = typeof text === 'string' ? text : String(text);
+    const cleanText = textStr.replace(/<[^>]*>/g, ''); // Remove HTML tags
+    
+    const id = cleanText.toLowerCase()
       .replace(/[^\w\s-]/g, '') // Remove special characters
       .replace(/\s+/g, '-') // Replace spaces with hyphens
       .trim();
     
     toc.push({
       id,
-      text: String(text),
+      text: cleanText,
       level
     });
     
-    return `<h${level} id="${id}" class="heading-${level}">${String(text)}</h${level}>`;
+    return `<h${level} id="${id}" class="heading-${level}">${textStr}</h${level}>`;
   };
   
   marked.setOptions({
@@ -35,7 +39,7 @@ export function parseMarkdown(content: string): { html: string; toc: TocItem[] }
   
   const html = marked(content);
   
-  return { html, toc };
+  return { html: String(html), toc };
 }
 
 export async function loadMarkdownFile(path: string): Promise<string> {

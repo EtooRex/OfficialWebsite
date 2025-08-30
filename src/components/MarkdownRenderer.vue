@@ -27,7 +27,7 @@ const loadContent = async () => {
     html.value = parsed.html
     toc.value = parsed.toc
   } catch (err) {
-    error.value = 'Failed to load documentation'
+    error.value = `Failed to load documentation: ${err}`
     console.error(err)
   } finally {
     isLoading.value = false
