@@ -83,7 +83,7 @@ const loadDocument = (filename: string) => {
         <!-- Main Content Area -->
         <div class="flex-1">
           <div class="bg-white rounded-lg shadow-md p-8">
-            <MarkdownRenderer :src="currentDoc" />
+            <MarkdownRenderer :src="item.file" />
           </div>
         </div>
       </div>
