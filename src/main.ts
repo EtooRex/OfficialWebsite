@@ -20,14 +20,6 @@ import WeibullToolbox from './pages/WeibullToolbox.vue'
 import Services from './pages/Services.vue'
 import Learn from './pages/Learn.vue'
 
-// Import markdown docs
-import IntroDoc from '../docs/intro.md'
-import AeROSDoc from '../docs/aeros.md'
-import WeibullDoc from '../docs/weibull.md'
-
-// Import doc layout
-import DocLayout from './components/DocLayout.vue'
-
 const router = createRouter({
   history: createWebHistory(),
   routes: [
@@ -46,37 +38,6 @@ const router = createRouter({
     { path: '/weibull-toolbox', component: WeibullToolbox },
     { path: '/services', component: Services },
     { path: '/learn', component: Learn },
-    // Documentation routes
-    { 
-      path: '/docs/intro', 
-      component: () => ({
-        render() {
-          return h(DocLayout, {}, {
-            default: () => h(IntroDoc)
-          })
-        }
-      })
-    },
-    { 
-      path: '/docs/aeros', 
-      component: () => ({
-        render() {
-          return h(DocLayout, {}, {
-            default: () => h(AeROSDoc)
-          })
-        }
-      })
-    },
-    { 
-      path: '/docs/weibull-toolbox', 
-      component: () => ({
-        render() {
-          return h(DocLayout, {}, {
-            default: () => h(WeibullDoc)
-          })
-        }
-      })
-    },
   ],
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
@@ -86,9 +47,6 @@ const router = createRouter({
     }
   }
 })
-
-// Import h function for render functions
-import { h } from 'vue'
 
 const app = createApp(App)
 app.use(router)
