@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import MarkdownRenderer from '../components/MarkdownRenderer.vue'
 
-const currentDoc = ref('/docs/aeros.md')
+const currentDoc = ref('/docs/getting-started.md')
 
 const tableOfContents = [
   {
