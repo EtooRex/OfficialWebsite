@@ -60,13 +60,13 @@ import FooterSection from '../components/FooterSection.vue'
             </div>
             <div class="space-y-3">
               <div>
-                <router-link to="/docs/aeros" class="text-green-600 font-medium hover:underline block">
+                <router-link to="/aeros" class="text-green-600 font-medium hover:underline block">
                   AeROS® →
                 </router-link>
                 <p class="text-sm text-gray-600">Asset Reliability and Operations Simulation</p>
               </div>
               <div>
-                <router-link to="/docs/weibull-toolbox" class="text-green-600 font-medium hover:underline block">
+                <router-link to="/weibull-toolbox" class="text-green-600 font-medium hover:underline block">
                   Weibull Toolbox® →
                 </router-link>
                 <p class="text-sm text-gray-600">Advanced statistical analysis suite</p>
@@ -157,19 +157,19 @@ import FooterSection from '../components/FooterSection.vue'
               <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
                 <h3 class="text-lg font-bold text-dark mb-3">Introduction</h3>
                 <p class="text-gray-600 mb-4">Learn about AEROS platform and its capabilities.</p>
-                <router-link to="/docs/intro" class="text-primary font-medium hover:underline">Read Guide →</router-link>
+                <a href="http://localhost:5174/guide/" target="_blank" class="text-primary font-medium hover:underline">Read Guide →</a>
               </div>
               
               <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
                 <h3 class="text-lg font-bold text-dark mb-3">Installation</h3>
                 <p class="text-gray-600 mb-4">System requirements and installation instructions.</p>
-                <router-link to="/download" class="text-primary font-medium hover:underline">View Installation →</router-link>
+                <a href="http://localhost:5174/guide/installation" target="_blank" class="text-primary font-medium hover:underline">View Installation →</a>
               </div>
               
               <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
                 <h3 class="text-lg font-bold text-dark mb-3">Quick Start</h3>
                 <p class="text-gray-600 mb-4">Get up and running with your first simulation.</p>
-                <router-link to="/docs/intro" class="text-primary font-medium hover:underline">Start Tutorial →</router-link>
+                <a href="http://localhost:5174/guide/quick-start" target="_blank" class="text-primary font-medium hover:underline">Start Tutorial →</a>
               </div>
             </div>
           </div>
