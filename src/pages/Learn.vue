@@ -56,7 +56,7 @@ const loadDocument = (filename: string) => {
       <div class="flex gap-8">
         <!-- Sidebar with Table of Contents -->
 
-        <!--
+       
         <div class="w-64 flex-shrink-0">
           <div class="bg-white rounded-lg shadow-md p-6 sticky top-24">
             <h3 class="text-lg font-bold text-dark mb-4">Table of Contents</h3>
@@ -82,7 +82,7 @@ const loadDocument = (filename: string) => {
             </nav>
           </div>
         </div>
-        -->
+   
         
         <!-- Main Content Area -->
         <div class="flex-1">
