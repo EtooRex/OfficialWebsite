@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, watch, computed } from 'vue'
 import { useRoute } from 'vue-router'
-import { parseMarkdown, loadMarkdownFile, type TocItem } from '../utils/markdown.js'
+import { parseMarkdown, loadMarkdownFile, type TocItem } from '../utils/markdown'
 
 const route = useRoute()
 const content = ref('')
@@ -31,15 +31,9 @@ const loadContent = async () => {
     const parsed = parseMarkdown(markdownContent)
     html.value = parsed.html
     toc.value = parsed.toc
-    
-    console.log('Loaded content:', { 
-      contentLength: markdownContent.length, 
-      htmlLength: parsed.html.length, 
-      tocItems: parsed.toc.length 
-    })
   } catch (err) {
     error.value = `Failed to load documentation: ${String(err)}`
-    console.error(err)
+    console.error('Markdown loading error:', err)
   } finally {
     isLoading.value = false
   }
@@ -61,7 +55,7 @@ watch(() => route.params.path, loadContent)
     <!-- Table of Contents Sidebar -->
     <div class="lg:w-1/4">
       <div class="bg-white rounded-lg shadow-lg p-6 sticky top-24">
-        <h3 class="text-lg font-bold text-dark mb-4">Table of Contents</h3>
+        <h3 class="text-lg font-bold text-gray-900 mb-4">Table of Contents</h3>
         
         <div v-if="isLoading" class="space-y-2">
           <div class="h-4 bg-gray-200 rounded animate-pulse"></div>
@@ -70,20 +64,20 @@ watch(() => route.params.path, loadContent)
         </div>
         
         <nav v-else-if="toc.length > 0" class="space-y-1">
-          <a
+          <button
             v-for="item in toc"
             :key="item.id"
-            @click.prevent="scrollToHeading(item.id)"
+            @click="scrollToHeading(item.id)"
             :class="[
-              'block py-2 px-3 text-sm rounded-md cursor-pointer transition-colors duration-200',
-              item.level === 1 ? 'font-semibold text-dark hover:bg-primary/10 hover:text-primary' : '',
-              item.level === 2 ? 'ml-4 text-gray-700 hover:bg-gray-100 hover:text-primary' : '',
-              item.level === 3 ? 'ml-8 text-gray-600 hover:bg-gray-100 hover:text-primary' : '',
-              item.level >= 4 ? 'ml-12 text-gray-500 hover:bg-gray-100 hover:text-primary' : ''
+              'block w-full text-left py-2 px-3 text-sm rounded-md transition-colors duration-200 hover:bg-pink-50',
+              item.level === 1 ? 'font-semibold text-gray-900 hover:text-pink-600' : '',
+              item.level === 2 ? 'ml-4 text-gray-700 hover:text-pink-600' : '',
+              item.level === 3 ? 'ml-8 text-gray-600 hover:text-pink-600' : '',
+              item.level >= 4 ? 'ml-12 text-gray-500 hover:text-pink-600' : ''
             ]"
           >
             {{ item.text }}
-          </a>
+          </button>
         </nav>
         
         <div v-else class="text-gray-500 text-sm">
@@ -108,14 +102,14 @@ watch(() => route.params.path, loadContent)
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
             </svg>
           </div>
-          <h3 class="text-xl font-bold text-dark mb-2">{{ error }}</h3>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">{{ error }}</h3>
           <p class="text-gray-600">Please check the documentation path and try again.</p>
         </div>
         
         <div 
           v-else 
           v-html="html"
-          class="markdown-content"
+          class="prose prose-lg max-w-none"
         ></div>
       </div>
     </div>
@@ -123,37 +117,17 @@ watch(() => route.params.path, loadContent)
 </template>
 
 <style scoped>
-/* Custom styles for markdown content */
-.markdown-content {
-  @apply max-w-none;
+/* Ensure proper styling for markdown content */
+:deep(.prose) {
+  color: inherit;
 }
 
-.markdown-content :deep(h1),
-.markdown-content :deep(h2),
-.markdown-content :deep(h3),
-.markdown-content :deep(h4),
-.markdown-content :deep(h5),
-.markdown-content :deep(h6) {
+:deep(.prose h1),
+:deep(.prose h2),
+:deep(.prose h3),
+:deep(.prose h4),
+:deep(.prose h5),
+:deep(.prose h6) {
   scroll-margin-top: 2rem;
-}
-
-.markdown-content :deep(ul) {
-  @apply text-gray-600;
-}
-
-.markdown-content :deep(ol) {
-  @apply text-gray-600;
-}
-
-.markdown-content :deep(table) {
-  @apply w-full border-collapse border border-gray-300 mb-4;
-}
-
-.markdown-content :deep(th) {
-  @apply bg-gray-100 border border-gray-300 px-4 py-2 text-left font-semibold text-dark;
-}
-
-.markdown-content :deep(td) {
-  @apply border border-gray-300 px-4 py-2 text-gray-600;
 }
 </style>
