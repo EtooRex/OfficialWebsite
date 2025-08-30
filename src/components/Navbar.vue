@@ -145,7 +145,7 @@ const isHomePage = computed(() => route.path === '/')
 
 const navItems = [
   { name: 'Services', href: '/services' },
-  { name: 'Learn', href: '/learn' },
+  { name: 'Learn', href: '/documentation' },
   { name: 'Download', href: '/download' }
 ]
 

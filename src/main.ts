@@ -19,6 +19,7 @@ import AeROS from './pages/AeROS.vue'
 import WeibullToolbox from './pages/WeibullToolbox.vue'
 import Services from './pages/Services.vue'
 import Learn from './pages/Learn.vue'
+import Documentation from './pages/Documentation.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -38,6 +39,7 @@ const router = createRouter({
     { path: '/weibull-toolbox', component: WeibullToolbox },
     { path: '/services', component: Services },
     { path: '/learn', component: Learn },
+    { path: '/documentation', component: Documentation },
   ],
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
