@@ -41,6 +41,7 @@ const loadDocument = (filename: string) => {
 <template>
   <div class="pt-20">
     <!-- Hero Section -->
+    
     <div class="bg-primary/10 py-16">
       <div class="container mx-auto px-4">
         <h1 class="text-4xl font-bold text-dark mb-4">AEROS Documentation</h1>
@@ -54,6 +55,8 @@ const loadDocument = (filename: string) => {
     <div class="container mx-auto px-4 py-8">
       <div class="flex gap-8">
         <!-- Sidebar with Table of Contents -->
+
+        <!--
         <div class="w-64 flex-shrink-0">
           <div class="bg-white rounded-lg shadow-md p-6 sticky top-24">
             <h3 class="text-lg font-bold text-dark mb-4">Table of Contents</h3>
@@ -79,11 +82,12 @@ const loadDocument = (filename: string) => {
             </nav>
           </div>
         </div>
+        -->
         
         <!-- Main Content Area -->
         <div class="flex-1">
           <div class="bg-white rounded-lg shadow-md p-8">
-            <MarkdownRenderer :src="item.file" />
+            <MarkdownRenderer :src="currentDoc" />
           </div>
         </div>
       </div>
