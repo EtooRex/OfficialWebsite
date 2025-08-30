@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, watch, computed } from 'vue'
 import { useRoute } from 'vue-router'
-import { parseMarkdown, loadMarkdownFile, type TocItem } from '../utils/markdown'
+import { parseMarkdown, loadMarkdownFile, type TocItem } from '../utils/markdown.js'
 
 const route = useRoute()
 const content = ref('')
@@ -23,11 +23,22 @@ const loadContent = async () => {
     const markdownContent = await loadMarkdownFile(docPath.value)
     content.value = markdownContent
     
+    if (!markdownContent || markdownContent.includes('# Error')) {
+      error.value = 'Documentation file not found or could not be loaded'
+      return
+    }
+    
     const parsed = parseMarkdown(markdownContent)
     html.value = parsed.html
     toc.value = parsed.toc
+    
+    console.log('Loaded content:', { 
+      contentLength: markdownContent.length, 
+      htmlLength: parsed.html.length, 
+      tocItems: parsed.toc.length 
+    })
   } catch (err) {
-    error.value = `Failed to load documentation: ${err}`
+    error.value = `Failed to load documentation: ${String(err)}`
     console.error(err)
   } finally {
     isLoading.value = false
@@ -103,8 +114,8 @@ watch(() => route.params.path, loadContent)
         
         <div 
           v-else 
-          v-html="html" 
-          class="prose prose-lg max-w-none prose-headings:text-dark prose-headings:font-bold prose-h1:text-3xl prose-h1:mb-6 prose-h2:text-2xl prose-h2:mb-4 prose-h2:mt-8 prose-h3:text-xl prose-h3:mb-3 prose-h3:mt-6 prose-p:text-gray-600 prose-p:mb-4 prose-li:text-gray-600 prose-strong:text-dark prose-code:bg-gray-100 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm prose-pre:bg-gray-800 prose-pre:text-gray-100 prose-pre:p-4 prose-pre:rounded-lg prose-pre:overflow-x-auto prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-4 prose-blockquote:italic prose-ul:list-disc prose-ol:list-decimal"
+          v-html="html"
+          class="markdown-content"
         ></div>
       </div>
     </div>
@@ -113,27 +124,36 @@ watch(() => route.params.path, loadContent)
 
 <style scoped>
 /* Custom styles for markdown content */
-:deep(.heading-1) {
-  @apply text-3xl font-bold text-dark mb-6 mt-0;
+.markdown-content {
+  @apply max-w-none;
 }
 
-:deep(.heading-2) {
-  @apply text-2xl font-bold text-dark mb-4 mt-8 pb-2 border-b border-gray-200;
+.markdown-content :deep(h1),
+.markdown-content :deep(h2),
+.markdown-content :deep(h3),
+.markdown-content :deep(h4),
+.markdown-content :deep(h5),
+.markdown-content :deep(h6) {
+  scroll-margin-top: 2rem;
 }
 
-:deep(.heading-3) {
-  @apply text-xl font-bold text-dark mb-3 mt-6;
+.markdown-content :deep(ul) {
+  @apply text-gray-600;
 }
 
-:deep(.heading-4) {
-  @apply text-lg font-semibold text-dark mb-2 mt-4;
+.markdown-content :deep(ol) {
+  @apply text-gray-600;
 }
 
-:deep(.heading-5) {
-  @apply text-base font-semibold text-dark mb-2 mt-4;
+.markdown-content :deep(table) {
+  @apply w-full border-collapse border border-gray-300 mb-4;
 }
 
-:deep(.heading-6) {
-  @apply text-sm font-semibold text-dark mb-2 mt-4;
+.markdown-content :deep(th) {
+  @apply bg-gray-100 border border-gray-300 px-4 py-2 text-left font-semibold text-dark;
+}
+
+.markdown-content :deep(td) {
+  @apply border border-gray-300 px-4 py-2 text-gray-600;
 }
 </style>
