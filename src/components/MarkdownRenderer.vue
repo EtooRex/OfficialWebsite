@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, watch, computed } from 'vue'
 import { useRoute } from 'vue-router'
-import { parseMarkdown, loadMarkdownFile, type TocItem } from '../utils/markdown'
+import { extractTableOfContents, convertMarkdownToHtml, loadMarkdownFile, type TocItem } from '../utils/markdown'
 
 const route = useRoute()
 const content = ref('')
@@ -23,16 +23,17 @@ const loadContent = async () => {
     const markdownContent = await loadMarkdownFile(docPath.value)
     content.value = markdownContent
     
-    if (!markdownContent || markdownContent.includes('# Error')) {
-      error.value = 'Documentation file not found or could not be loaded'
+    if (markdownContent.includes('# Error')) {
+      error.value = 'Documentation file not found'
       return
     }
     
-    const parsed = parseMarkdown(markdownContent)
-    html.value = parsed.html
-    toc.value = parsed.toc
+    // Extract ToC and convert to HTML
+    toc.value = extractTableOfContents(markdownContent)
+    html.value = convertMarkdownToHtml(markdownContent)
+    
   } catch (err) {
-    error.value = `Failed to load documentation: ${String(err)}`
+    error.value = `Failed to load documentation: ${err}`
     console.error('Markdown loading error:', err)
   } finally {
     isLoading.value = false
@@ -40,7 +41,8 @@ const loadContent = async () => {
 }
 
 const scrollToHeading = (id: string) => {
-  const element = document.getElementById(id)
+  const cleanId = id.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-')
+  const element = document.getElementById(cleanId)
   if (element) {
     element.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
@@ -67,7 +69,7 @@ watch(() => route.params.path, loadContent)
           <button
             v-for="item in toc"
             :key="item.id"
-            @click="scrollToHeading(item.id)"
+            @click="scrollToHeading(item.text)"
             :class="[
               'block w-full text-left py-2 px-3 text-sm rounded-md transition-colors duration-200 hover:bg-pink-50',
               item.level === 1 ? 'font-semibold text-gray-900 hover:text-pink-600' : '',
@@ -99,7 +101,7 @@ watch(() => route.params.path, loadContent)
         <div v-else-if="error" class="text-center py-12">
           <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
             <svg class="w-8 h-8 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732 3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
             </svg>
           </div>
           <h3 class="text-xl font-bold text-gray-900 mb-2">{{ error }}</h3>
@@ -109,7 +111,7 @@ watch(() => route.params.path, loadContent)
         <div 
           v-else 
           v-html="html"
-          class="prose prose-lg max-w-none"
+          class="markdown-content"
         ></div>
       </div>
     </div>
@@ -117,17 +119,12 @@ watch(() => route.params.path, loadContent)
 </template>
 
 <style scoped>
-/* Ensure proper styling for markdown content */
-:deep(.prose) {
-  color: inherit;
-}
-
-:deep(.prose h1),
-:deep(.prose h2),
-:deep(.prose h3),
-:deep(.prose h4),
-:deep(.prose h5),
-:deep(.prose h6) {
+.markdown-content :deep(h1),
+.markdown-content :deep(h2),
+.markdown-content :deep(h3),
+.markdown-content :deep(h4),
+.markdown-content :deep(h5),
+.markdown-content :deep(h6) {
   scroll-margin-top: 2rem;
 }
 </style>
