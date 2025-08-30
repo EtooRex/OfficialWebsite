@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, watch, computed } from 'vue'
+import { ref, onMounted, onUnmounted, watch, computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { extractTableOfContents, convertMarkdownToHtml, loadMarkdownFile, type TocItem } from '../utils/markdown'
 
@@ -9,11 +9,26 @@ const html = ref('')
 const toc = ref<TocItem[]>([])
 const isLoading = ref(true)
 const error = ref('')
+const activeHeading = ref('')
 
 const docPath = computed(() => {
   const path = route.params.path as string
   return path || 'getting-started'
 })
+
+const updateActiveHeading = () => {
+  const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6')
+  let currentActive = ''
+  
+  for (const heading of headings) {
+    const rect = heading.getBoundingClientRect()
+    if (rect.top <= 100) {
+      currentActive = heading.id
+    }
+  }
+  
+  activeHeading.value = currentActive
+}
 
 const loadContent = async () => {
   isLoading.value = true
@@ -32,6 +47,9 @@ const loadContent = async () => {
     toc.value = extractTableOfContents(markdownContent)
     html.value = convertMarkdownToHtml(markdownContent)
     
+    // Update active heading after content loads
+    setTimeout(updateActiveHeading, 100)
+    
   } catch (err) {
     error.value = `Failed to load documentation: ${err}`
     console.error('Markdown loading error:', err)
@@ -48,7 +66,15 @@ const scrollToHeading = (id: string) => {
   }
 }
 
-onMounted(loadContent)
+onMounted(() => {
+  loadContent()
+  window.addEventListener('scroll', updateActiveHeading)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', updateActiveHeading)
+})
+
 watch(() => route.params.path, loadContent)
 </script>
 
@@ -72,6 +98,9 @@ watch(() => route.params.path, loadContent)
             @click="scrollToHeading(item.text)"
             :class="[
               'block w-full text-left py-2 px-3 text-sm rounded-md transition-colors duration-200 hover:bg-pink-50',
+              // Active state styling
+              activeHeading === item.id ? 'bg-pink-100 text-pink-700 font-semibold' : 'hover:bg-pink-50',
+              // Level-based styling
               item.level === 1 ? 'font-semibold text-gray-900 hover:text-pink-600' : '',
               item.level === 2 ? 'ml-4 text-gray-700 hover:text-pink-600' : '',
               item.level === 3 ? 'ml-8 text-gray-600 hover:text-pink-600' : '',
