@@ -13,8 +13,11 @@ export function parseMarkdown(content: string): { html: string; toc: TocItem[] }
   const renderer = new marked.Renderer();
   
   renderer.heading = function(text: string, level: number) {
+    // Ensure text is a string before processing
+    const textStr = String(text || '');
+    
     // Extract clean text for ToC
-    const cleanText = text.replace(/<[^>]*>/g, '').trim();
+    const cleanText = textStr.replace(/<[^>]*>/g, '').trim();
     
     // Generate ID from clean text
     const id = cleanText.toLowerCase()
@@ -41,7 +44,7 @@ export function parseMarkdown(content: string): { html: string; toc: TocItem[] }
     
     const className = headingClasses[level as keyof typeof headingClasses] || headingClasses[6];
     
-    return `<h${level} id="${id}" class="${className}">${text}</h${level}>`;
+    return `<h${level} id="${id}" class="${className}">${textStr}</h${level}>`;
   };
   
   // Configure other renderers for better styling
