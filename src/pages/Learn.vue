@@ -109,7 +109,9 @@
     </div>
     
     <!-- Footer -->
-    <FooterSection />
+   <!--
+    <FooterSection /> 
+    -->
   </div>
 </template>
 
